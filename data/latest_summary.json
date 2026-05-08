@@ -1,8 +1,8 @@
 {
   "date": "2026-05-08",
   "total": 34,
-  "new": 2,
-  "unchanged": 31,
+  "new": 0,
+  "unchanged": 33,
   "revised": 0,
   "failed": 1,
   "revisions": [],
@@ -267,17 +267,17 @@
       "series_id": "hud_fmr_states",
       "series_name": "Fair Market Rents \u2014 states",
       "agency": "HUD",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "hud_fmr_ca_detail",
       "series_name": "Fair Market Rents \u2014 California detail",
       "agency": "HUD",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
