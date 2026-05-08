@@ -4,7 +4,7 @@
 
 A fully automated system that takes daily snapshots of 20 US federal data series and logs when agencies silently revise historical figures. The revision history preserved here does not exist anywhere else.
 
-📊 **[View Live Dashboard →](https://YOUR_USERNAME.github.io/govt-stats-tracker)**
+📊 **[View Live Dashboard →](https://abhisek077.github.io/govt-stats-tracker/)**
 
 ---
 
