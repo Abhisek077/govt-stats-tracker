@@ -76,24 +76,34 @@ def fetch_bea(table, line, geo):
     if not BEA_API_KEY:
         print("  [SKIP] BEA — no BEA_API_KEY secret set")
         return None
+
     url = (
         f"https://apps.bea.gov/api/data/?UserID={BEA_API_KEY}"
         f"&method=GetData&datasetname=Regional&TableName={table}"
         f"&LineCode={line}&GeoFips={geo}&Year=LAST5&ResultFormat=JSON"
     )
+
     return fetch_json(url)
 
 
 def fetch_census_acs(year, variables, geo):
     params = {"get": variables, "for": geo}
+
     if CENSUS_API_KEY:
         params["key"] = CENSUS_API_KEY
-    return fetch_encoded(f"https://api.census.gov/data/{year}/acs/acs1", params)
+
+    return fetch_encoded(
+        f"https://api.census.gov/data/{year}/acs/acs1",
+        params
+    )
 
 
 def fetch_cdc(resource_id, params):
     """CDC Socrata — use fetch_encoded for proper param handling."""
-    return fetch_encoded(f"https://data.cdc.gov/resource/{resource_id}.json", params)
+    return fetch_encoded(
+        f"https://data.cdc.gov/resource/{resource_id}.json",
+        params
+    )
 
 
 # ── Vintage management ────────────────────────────────────────────────────────
@@ -101,16 +111,21 @@ def fetch_cdc(resource_id, params):
 def get_latest_vintage(series_id):
     safe = series_id.replace("/", "_").replace(" ", "_")
     d = DATA_DIR / safe
+
     if not d.exists():
         return None
+
     files = sorted(d.glob("*.json"))
+
     return json.loads(files[-1].read_text()) if files else None
 
 
 def save_vintage(series_id, date, data):
     safe = series_id.replace("/", "_").replace(" ", "_")
+
     p = DATA_DIR / safe / f"{date}.json"
     p.parent.mkdir(parents=True, exist_ok=True)
+
     p.write_text(json.dumps(data, indent=2, sort_keys=True))
 
 
@@ -122,40 +137,95 @@ def compute_hash(data):
 
 def find_diffs(old, new, prefix=""):
     diffs = []
+
     if isinstance(old, dict) and isinstance(new, dict):
+
         for k in sorted(set(old) | set(new)):
             path = f"{prefix}.{k}" if prefix else k
+
             if k not in old:
-                diffs.append({"path": path, "type": "added",   "old": None,     "new": new[k]})
+                diffs.append({
+                    "path": path,
+                    "type": "added",
+                    "old": None,
+                    "new": new[k]
+                })
+
             elif k not in new:
-                diffs.append({"path": path, "type": "removed", "old": old[k],   "new": None})
+                diffs.append({
+                    "path": path,
+                    "type": "removed",
+                    "old": old[k],
+                    "new": None
+                })
+
             else:
                 diffs.extend(find_diffs(old[k], new[k], path))
+
     elif isinstance(old, list) and isinstance(new, list):
+
         for i in range(max(len(old), len(new))):
             path = f"{prefix}[{i}]"
+
             if i >= len(old):
-                diffs.append({"path": path, "type": "added",   "old": None,    "new": new[i]})
+                diffs.append({
+                    "path": path,
+                    "type": "added",
+                    "old": None,
+                    "new": new[i]
+                })
+
             elif i >= len(new):
-                diffs.append({"path": path, "type": "removed", "old": old[i],  "new": None})
+                diffs.append({
+                    "path": path,
+                    "type": "removed",
+                    "old": old[i],
+                    "new": None
+                })
+
             else:
                 diffs.extend(find_diffs(old[i], new[i], path))
+
     else:
         if str(old) != str(new):
-            diffs.append({"path": prefix, "type": "changed", "old": old, "new": new})
+            diffs.append({
+                "path": prefix,
+                "type": "changed",
+                "old": old,
+                "new": new
+            })
+
     return diffs
 
 
 def log_revision(date, sid, name, agency, count, sample):
     exists = DIFF_LOG.exists()
+
     with open(DIFF_LOG, "a", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
+
         if not exists:
-            w.writerow(["date", "series_id", "series_name", "agency", "diff_count", "sample_diff"])
-        w.writerow([date, sid, name, agency, count, sample[:300]])
+            w.writerow([
+                "date",
+                "series_id",
+                "series_name",
+                "agency",
+                "diff_count",
+                "sample_diff"
+            ])
+
+        w.writerow([
+            date,
+            sid,
+            name,
+            agency,
+            count,
+            sample[:300]
+        ])
 
 
 def process(series_id, name, agency, data, today):
+
     r = {
         "series_id":   series_id,
         "series_name": name,
@@ -164,187 +234,397 @@ def process(series_id, name, agency, data, today):
         "diff_count":  0,
         "is_new":      False,
     }
+
     if data is None:
         r["status"] = "fetch_failed"
         return r
+
     prev = get_latest_vintage(series_id)
+
     if prev is None:
         save_vintage(series_id, today, data)
         r["is_new"] = True
         return r
+
     if compute_hash(prev) == compute_hash(data):
         r["status"] = "unchanged"
         return r
+
     diffs = find_diffs(prev, data)
+
     r["diff_count"] = len(diffs)
     r["status"] = "REVISED"
+
     save_vintage(series_id, today, data)
-    sample = "; ".join(f"{d['path']}: {d['old']} → {d['new']}" for d in diffs[:3])
-    log_revision(today, series_id, name, agency, len(diffs), sample)
+
+    sample = "; ".join(
+        f"{d['path']}: {d['old']} → {d['new']}"
+        for d in diffs[:3]
+    )
+
+    log_revision(
+        today,
+        series_id,
+        name,
+        agency,
+        len(diffs),
+        sample
+    )
+
     print(f"  ⚠️  REVISION: {len(diffs)} changes — {sample[:120]}")
+
     return r
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def run():
+
     today = datetime.date.today().isoformat()
-    print(f"\n{'='*65}\n  Vintage Tracker — {today}\n{'='*65}")
+
+    print(
+        f"\n{'='*65}\n"
+        f"  Vintage Tracker — {today}\n"
+        f"{'='*65}"
+    )
+
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+
     results = []
 
     # ── BLS: State unemployment ───────────────────────────────────────────
+
     print("\n[BLS] State unemployment (LAUS)...")
-    d = fetch_bls([f"LASST{f}0000000000003" for f in SAMPLE_STATES])
+
+    d = fetch_bls([
+        f"LASST{f}0000000000003"
+        for f in SAMPLE_STATES
+    ])
+
     if d and d.get("status") == "REQUEST_SUCCEEDED":
+
         for s in d.get("Results", {}).get("series", []):
+
             sid = s.get("seriesID", "?")
+
             results.append(process(
-                f"bls_laus_{sid}", f"State unemployment — {sid}",
-                "BLS", s.get("data", []), today))
+                f"bls_laus_{sid}",
+                f"State unemployment — {sid}",
+                "BLS",
+                s.get("data", []),
+                today
+            ))
+
     time.sleep(2)
 
     # ── BLS: State nonfarm payroll ────────────────────────────────────────
+
     print("\n[BLS] State nonfarm payroll (CES)...")
-    d = fetch_bls([f"SMS{f}000000000000001" for f in SAMPLE_STATES])
+
+    d = fetch_bls([
+        f"SMS{f}000000000000001"
+        for f in SAMPLE_STATES
+    ])
+
     if d and d.get("status") == "REQUEST_SUCCEEDED":
+
         for s in d.get("Results", {}).get("series", []):
+
             sid = s.get("seriesID", "?")
+
             results.append(process(
-                f"bls_ces_{sid}", f"State payroll — {sid}",
-                "BLS", s.get("data", []), today))
+                f"bls_ces_{sid}",
+                f"State payroll — {sid}",
+                "BLS",
+                s.get("data", []),
+                today
+            ))
+
     time.sleep(2)
 
     # ── BLS: Metro CPI ────────────────────────────────────────────────────
+
     print("\n[BLS] Metro CPI...")
-    d = fetch_bls(["CUURS49ASA0", "CUURS12ASA0", "CUURS35ASA0", "CUURS23ASA0"])
+
+    d = fetch_bls([
+        "CUURS49ASA0",
+        "CUURS12ASA0",
+        "CUURS35ASA0",
+        "CUURS23ASA0"
+    ])
+
     if d and d.get("status") == "REQUEST_SUCCEEDED":
+
         for s in d.get("Results", {}).get("series", []):
+
             sid = s.get("seriesID", "?")
+
             results.append(process(
-                f"bls_cpi_{sid}", f"Metro CPI — {sid}",
-                "BLS", s.get("data", []), today))
+                f"bls_cpi_{sid}",
+                f"Metro CPI — {sid}",
+                "BLS",
+                s.get("data", []),
+                today
+            ))
+
     time.sleep(2)
 
     # ── BEA: State GDP + personal income ──────────────────────────────────
+
     print("\n[BEA] State GDP + personal income...")
+
     for fips, name in zip(SAMPLE_STATES, SAMPLE_STATE_NAMES):
+
         results.append(process(
-            f"bea_sgdp_{fips}", f"State GDP — {name}",
-            "BEA", fetch_bea("SQGDP9", "1", fips + "000"), today))
+            f"bea_sgdp_{fips}",
+            f"State GDP — {name}",
+            "BEA",
+            fetch_bea("SQGDP9", "1", fips + "000"),
+            today
+        ))
+
         time.sleep(1)
+
         results.append(process(
-            f"bea_pinc_{fips}", f"Personal income — {name}",
-            "BEA", fetch_bea("CAINC1", "1", fips + "000"), today))
+            f"bea_pinc_{fips}",
+            f"Personal income — {name}",
+            "BEA",
+            fetch_bea("CAINC1", "1", fips + "000"),
+            today
+        ))
+
         time.sleep(1)
 
     # ── Census: ACS poverty ───────────────────────────────────────────────
+
     print(f"\n[Census] ACS poverty ({ACS_YEAR})...")
+
     results.append(process(
-        f"census_acs_poverty_{ACS_YEAR}", f"ACS poverty — {ACS_YEAR}",
-        "Census", fetch_census_acs(ACS_YEAR, "B17001_001E,B17001_002E,NAME", "state:*"), today))
+        f"census_acs_poverty_{ACS_YEAR}",
+        f"ACS poverty — {ACS_YEAR}",
+        "Census",
+        fetch_census_acs(
+            ACS_YEAR,
+            "B17001_001E,B17001_002E,NAME",
+            "state:*"
+        ),
+        today
+    ))
+
     time.sleep(2)
 
     # ── Census: ACS median income ─────────────────────────────────────────
+
     print(f"\n[Census] ACS median income ({ACS_YEAR})...")
+
     results.append(process(
-        f"census_acs_income_{ACS_YEAR}", f"ACS median income — {ACS_YEAR}",
-        "Census", fetch_census_acs(ACS_YEAR, "B19013_001E,NAME", "state:*"), today))
+        f"census_acs_income_{ACS_YEAR}",
+        f"ACS median income — {ACS_YEAR}",
+        "Census",
+        fetch_census_acs(
+            ACS_YEAR,
+            "B19013_001E,NAME",
+            "state:*"
+        ),
+        today
+    ))
+
     time.sleep(2)
 
     # ── Census: SAIPE poverty estimates ───────────────────────────────────
+
     print("\n[Census] SAIPE poverty estimates (2023)...")
+
     results.append(process(
-        "census_saipe_2023", "SAIPE state poverty estimates 2023",
+        "census_saipe_2023",
+        "SAIPE state poverty estimates 2023",
         "Census",
-        fetch_encoded("https://api.census.gov/data/timeseries/poverty/saipe",
-            {"get": "NAME,SAEPOVRT0_17_PT,SAEPOVRTALL_PT", "for": "state:*", "time": "2023"}),
-        today))
+        fetch_encoded(
+            "https://api.census.gov/data/timeseries/poverty/saipe",
+            {
+                "get": "NAME,SAEPOVRT0_17_PT,SAEPOVRTALL_PT",
+                "for": "state:*",
+                "time": "2023"
+            }
+        ),
+        today
+    ))
+
     time.sleep(2)
 
     # ── CDC: Provisional drug overdose deaths ─────────────────────────────
+
     print("\n[CDC] Provisional drug overdose deaths...")
+
     results.append(process(
-        "cdc_overdose_provisional", "Provisional drug overdose deaths",
+        "cdc_overdose_provisional",
+        "Provisional drug overdose deaths",
         "CDC",
-        fetch_cdc("xkb8-kh2a", {"$limit": "5000", "$order": "year DESC, month DESC"}),
-        today))
+        fetch_cdc(
+            "xkb8-kh2a",
+            {
+                "$limit": "5000",
+                "$order": "year DESC, month DESC"
+            }
+        ),
+        today
+    ))
+
     time.sleep(2)
 
     # ── CDC: Weekly mortality by state ────────────────────────────────────
+
     print("\n[CDC] Weekly mortality by state...")
+
     results.append(process(
-        "cdc_weekly_mortality", "Weekly mortality by state",
+        "cdc_weekly_mortality",
+        "Weekly mortality by state",
         "CDC",
-        fetch_cdc("3yf8-kanr", {"$limit": "2000", "$order": "week_ending_date DESC"}),
-        today))
+        fetch_json(
+            "https://data.cdc.gov/resource/3yf8-kanr.json?$limit=2000&$order=week_ending_date DESC"
+        ),
+        today
+    ))
+
     time.sleep(2)
 
     # ── CDC: BRFSS behavioral risk ────────────────────────────────────────
+
     print("\n[CDC] BRFSS behavioral risk...")
+
     results.append(process(
-        "cdc_brfss", "BRFSS behavioral risk estimates",
+        "cdc_brfss",
+        "BRFSS behavioral risk estimates",
         "CDC",
-        fetch_cdc("dttw-5yxu", {"$limit": "5000", "$order": "year DESC", "$where": "year>2020"}),
-        today))
+        fetch_cdc(
+            "dttw-5yxu",
+            {
+                "$limit": "5000",
+                "$order": "year DESC",
+                "$where": "year>2020"
+            }
+        ),
+        today
+    ))
+
     time.sleep(2)
 
-    # ── EPA: AQS PM2.5 (FIX: build URL manually to preserve @ in email) ──
+    # ── EPA: AQS PM2.5 ────────────────────────────────────────────────────
+
     print("\n[EPA] AQS PM2.5...")
+
     if EPA_AQS_EMAIL and EPA_AQS_KEY:
+
         epa_url = (
             f"https://aqs.epa.gov/data/api/annualData/byState"
-            f"?email={EPA_AQS_EMAIL}&key={EPA_AQS_KEY}"
-            f"&param=88101&bdate=20230101&edate=20231231&state=06"
+            f"?email={EPA_AQS_EMAIL}"
+            f"&key={EPA_AQS_KEY}"
+            f"&param=88101"
+            f"&bdate=20230101"
+            f"&edate=20231231"
+            f"&state=06"
         )
+
         results.append(process(
-            "epa_aqs_pm25_ca", "AQS PM2.5 — California",
-            "EPA", fetch_json(epa_url), today))
+            "epa_aqs_pm25_ca",
+            "AQS PM2.5 — California",
+            "EPA",
+            fetch_json(epa_url),
+            today
+        ))
+
     else:
         print("  [SKIP] set EPA_AQS_EMAIL + EPA_AQS_KEY secrets")
+
     time.sleep(2)
 
     # ── EPA: TRI toxic releases ───────────────────────────────────────────
+
     print("\n[EPA] TRI toxic releases...")
+
     results.append(process(
-        "epa_tri_ca_2022", "TRI toxic releases — CA 2022",
+        "epa_tri_ca_2022",
+        "TRI toxic releases — CA 2022",
         "EPA",
-        fetch_json("https://data.epa.gov/efservice/tri_facility/state_abbr/=/CA/reporting_year/=/2022/rows/0:100/JSON"),
-        today))
+        fetch_json(
+            "https://data.epa.gov/efservice/tri_facility/state_abbr/=/CA/reporting_year/=/2022/rows/0:100/JSON"
+        ),
+        today
+    ))
+
     time.sleep(2)
 
     # ── HUD: Fair Market Rents (state list) ──────────────────────────────
+
     print("\n[HUD] Fair Market Rents...")
+
     if HUD_API_TOKEN:
+
         results.append(process(
-            "hud_fmr_states", "Fair Market Rents — states",
+            "hud_fmr_states",
+            "Fair Market Rents — states",
             "HUD",
-            fetch_json("https://www.huduser.gov/hudapi/public/fmr/listStates",
-                       headers={"Authorization": f"Bearer {HUD_API_TOKEN}"}),
-            today))
+            fetch_json(
+                "https://www.huduser.gov/hudapi/public/fmr/listStates",
+                headers={
+                    "Authorization": f"Bearer {HUD_API_TOKEN}"
+                }
+            ),
+            today
+        ))
+
     else:
         print("  [SKIP] set HUD_API_TOKEN")
+
     time.sleep(2)
 
     # ── HUD: Fair Market Rents (California detail) ────────────────────────
+
     print("\n[HUD] Fair Market Rents — California detail...")
+
     if HUD_API_TOKEN:
+
         results.append(process(
-            "hud_fmr_ca_detail", "Fair Market Rents — California detail",
+            "hud_fmr_ca_detail",
+            "Fair Market Rents — California detail",
             "HUD",
-            fetch_json("https://www.huduser.gov/hudapi/public/fmr/statedata/CA",
-                       headers={"Authorization": f"Bearer {HUD_API_TOKEN}"}),
-            today))
+            fetch_json(
+                "https://www.huduser.gov/hudapi/public/fmr/statedata/CA",
+                headers={
+                    "Authorization": f"Bearer {HUD_API_TOKEN}"
+                }
+            ),
+            today
+        ))
+
     else:
         print("  [SKIP] set HUD_API_TOKEN")
+
     time.sleep(2)
 
     # ── Summary ───────────────────────────────────────────────────────────
+
     print(f"\n{'─'*65}")
-    revised   = [r for r in results if r["status"] == "REVISED"]
-    failed    = [r for r in results if r["status"] == "fetch_failed"]
-    new_      = [r for r in results if r.get("is_new")]
-    unchanged = [r for r in results if r["status"] == "unchanged"]
+
+    revised = [
+        r for r in results
+        if r["status"] == "REVISED"
+    ]
+
+    failed = [
+        r for r in results
+        if r["status"] == "fetch_failed"
+    ]
+
+    new_ = [
+        r for r in results
+        if r.get("is_new")
+    ]
+
+    unchanged = [
+        r for r in results
+        if r["status"] == "unchanged"
+    ]
 
     print(f"  Polled    : {len(results)}")
     print(f"  New       : {len(new_)}")
@@ -353,28 +633,45 @@ def run():
     print(f"  Failed    : {len(failed)}")
 
     summary = {
-        "date":      today,
-        "total":     len(results),
-        "new":       len(new_),
+        "date": today,
+        "total": len(results),
+        "new": len(new_),
         "unchanged": len(unchanged),
-        "revised":   len(revised),
-        "failed":    len(failed),
+        "revised": len(revised),
+        "failed": len(failed),
         "revisions": [
-            {"series": r["series_id"], "name": r["series_name"],
-             "agency": r["agency"], "diffs": r["diff_count"]}
+            {
+                "series": r["series_id"],
+                "name": r["series_name"],
+                "agency": r["agency"],
+                "diffs": r["diff_count"]
+            }
             for r in revised
         ],
         "results": results,
     }
+
     SUMMARY_FILE.parent.mkdir(parents=True, exist_ok=True)
+
     SUMMARY_FILE.write_text(json.dumps(summary, indent=2))
 
-    meta = json.loads(META_FILE.read_text()) if META_FILE.exists() else {}
+    meta = (
+        json.loads(META_FILE.read_text())
+        if META_FILE.exists()
+        else {}
+    )
+
     if "started" not in meta:
         meta["started"] = today
+
     meta["last_run"] = today
     meta["total_runs"] = meta.get("total_runs", 0) + 1
-    meta["total_revisions_detected"] = meta.get("total_revisions_detected", 0) + len(revised)
+
+    meta["total_revisions_detected"] = (
+        meta.get("total_revisions_detected", 0)
+        + len(revised)
+    )
+
     META_FILE.write_text(json.dumps(meta, indent=2))
 
     print(f"\n✓ Done — {DATA_DIR}\n{'='*65}\n")
