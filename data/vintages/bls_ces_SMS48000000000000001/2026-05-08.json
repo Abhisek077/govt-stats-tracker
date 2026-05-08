@@ -1,0 +1,141 @@
+[
+  {
+    "footnotes": [
+      {
+        "code": "P",
+        "text": "Preliminary"
+      }
+    ],
+    "latest": "true",
+    "period": "M03",
+    "periodName": "March",
+    "value": "14403.5",
+    "year": "2026"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M02",
+    "periodName": "February",
+    "value": "14356.7",
+    "year": "2026"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M01",
+    "periodName": "January",
+    "value": "14363.1",
+    "year": "2026"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M12",
+    "periodName": "December",
+    "value": "14339.4",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M11",
+    "periodName": "November",
+    "value": "14306.5",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M10",
+    "periodName": "October",
+    "value": "14297.2",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M09",
+    "periodName": "September",
+    "value": "14307.0",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M08",
+    "periodName": "August",
+    "value": "14309.9",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M07",
+    "periodName": "July",
+    "value": "14302.4",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M06",
+    "periodName": "June",
+    "value": "14291.7",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M05",
+    "periodName": "May",
+    "value": "14321.2",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M04",
+    "periodName": "April",
+    "value": "14311.9",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M03",
+    "periodName": "March",
+    "value": "14286.3",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M02",
+    "periodName": "February",
+    "value": "14280.8",
+    "year": "2025"
+  },
+  {
+    "footnotes": [
+      {}
+    ],
+    "period": "M01",
+    "periodName": "January",
+    "value": "14267.3",
+    "year": "2025"
+  }
+]

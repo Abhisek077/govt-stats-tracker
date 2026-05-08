@@ -1,0 +1,46 @@
+{
+  "BEAAPI": {
+    "Request": {
+      "RequestParam": [
+        {
+          "ParameterName": "USERID",
+          "ParameterValue": "1AAD0FB4-15CB-4971-BA03-F77DE80C0B1E"
+        },
+        {
+          "ParameterName": "METHOD",
+          "ParameterValue": "GETDATA"
+        },
+        {
+          "ParameterName": "DATASETNAME",
+          "ParameterValue": "REGIONAL"
+        },
+        {
+          "ParameterName": "TABLENAME",
+          "ParameterValue": "SQGDP9"
+        },
+        {
+          "ParameterName": "LINECODE",
+          "ParameterValue": "1"
+        },
+        {
+          "ParameterName": "GEOFIPS",
+          "ParameterValue": "06000"
+        },
+        {
+          "ParameterName": "YEAR",
+          "ParameterValue": "LAST5"
+        },
+        {
+          "ParameterName": "RESULTFORMAT",
+          "ParameterValue": "JSON"
+        }
+      ]
+    },
+    "Results": {
+      "Error": {
+        "APIErrorCode": "4",
+        "APIErrorDescription": "This UserId is not active. Please activate it and try again."
+      }
+    }
+  }
+}
