@@ -133,15 +133,12 @@ Every vintage is preserved forever in git history. The revision log is append-on
 
 ## Citation
 
-If you use this dataset in research, please cite:
+If you use this data in research, journalism, or policy work, please cite:
 
-```
-Government Statistics Vintage Tracker [Dataset].
-https://github.com/YOUR_USERNAME/govt-stats-tracker
-Started: [DATE]. Accessed: [DATE].
-```
+> Gupta, A. (2026). Government Statistics Vintage Tracker (v1.0.0) [Dataset].
+> Zenodo. https://doi.org/10.5281/zenodo.20091343
 
----
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20091343.svg)](https://doi.org/10.5281/zenodo.20091343)
 
 ## License
 
