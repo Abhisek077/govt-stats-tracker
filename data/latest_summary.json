@@ -1,223 +1,223 @@
 {
   "date": "2026-05-08",
-  "total": 34,
-  "new": 24,
-  "unchanged": 0,
+  "total": 32,
+  "new": 5,
+  "unchanged": 24,
   "revised": 0,
-  "failed": 10,
+  "failed": 3,
   "revisions": [],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
       "series_name": "State unemployment \u2014 LASST060000000000003",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_laus_LASST360000000000003",
       "series_name": "State unemployment \u2014 LASST360000000000003",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_laus_LASST480000000000003",
       "series_name": "State unemployment \u2014 LASST480000000000003",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_laus_LASST170000000000003",
       "series_name": "State unemployment \u2014 LASST170000000000003",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_laus_LASST120000000000003",
       "series_name": "State unemployment \u2014 LASST120000000000003",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_ces_SMS06000000000000001",
-      "series_name": "State nonfarm payroll \u2014 SMS06000000000000001",
+      "series_name": "State payroll \u2014 SMS06000000000000001",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_ces_SMS36000000000000001",
-      "series_name": "State nonfarm payroll \u2014 SMS36000000000000001",
+      "series_name": "State payroll \u2014 SMS36000000000000001",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_ces_SMS48000000000000001",
-      "series_name": "State nonfarm payroll \u2014 SMS48000000000000001",
+      "series_name": "State payroll \u2014 SMS48000000000000001",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_ces_SMS17000000000000001",
-      "series_name": "State nonfarm payroll \u2014 SMS17000000000000001",
+      "series_name": "State payroll \u2014 SMS17000000000000001",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_ces_SMS12000000000000001",
-      "series_name": "State nonfarm payroll \u2014 SMS12000000000000001",
+      "series_name": "State payroll \u2014 SMS12000000000000001",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS49ASA0",
       "series_name": "Metro CPI \u2014 CUURS49ASA0",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS12ASA0",
       "series_name": "Metro CPI \u2014 CUURS12ASA0",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS35ASA0",
       "series_name": "Metro CPI \u2014 CUURS35ASA0",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS23ASA0",
       "series_name": "Metro CPI \u2014 CUURS23ASA0",
       "agency": "BLS",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bea_sgdp_06",
       "series_name": "State GDP \u2014 California",
       "agency": "BEA",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
-    },
-    {
-      "series_id": "bea_sgdp_36",
-      "series_name": "State GDP \u2014 New York",
-      "agency": "BEA",
-      "status": "ok",
-      "diff_count": 0,
-      "is_new": true
-    },
-    {
-      "series_id": "bea_sgdp_48",
-      "series_name": "State GDP \u2014 Texas",
-      "agency": "BEA",
-      "status": "ok",
-      "diff_count": 0,
-      "is_new": true
-    },
-    {
-      "series_id": "bea_sgdp_17",
-      "series_name": "State GDP \u2014 Illinois",
-      "agency": "BEA",
-      "status": "ok",
-      "diff_count": 0,
-      "is_new": true
-    },
-    {
-      "series_id": "bea_sgdp_12",
-      "series_name": "State GDP \u2014 Florida",
-      "agency": "BEA",
-      "status": "ok",
-      "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "bea_pinc_06",
       "series_name": "Personal income \u2014 California",
       "agency": "BEA",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
+    },
+    {
+      "series_id": "bea_sgdp_36",
+      "series_name": "State GDP \u2014 New York",
+      "agency": "BEA",
+      "status": "unchanged",
+      "diff_count": 0,
+      "is_new": false
     },
     {
       "series_id": "bea_pinc_36",
       "series_name": "Personal income \u2014 New York",
       "agency": "BEA",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
+    },
+    {
+      "series_id": "bea_sgdp_48",
+      "series_name": "State GDP \u2014 Texas",
+      "agency": "BEA",
+      "status": "unchanged",
+      "diff_count": 0,
+      "is_new": false
     },
     {
       "series_id": "bea_pinc_48",
       "series_name": "Personal income \u2014 Texas",
       "agency": "BEA",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
+    },
+    {
+      "series_id": "bea_sgdp_17",
+      "series_name": "State GDP \u2014 Illinois",
+      "agency": "BEA",
+      "status": "unchanged",
+      "diff_count": 0,
+      "is_new": false
     },
     {
       "series_id": "bea_pinc_17",
       "series_name": "Personal income \u2014 Illinois",
       "agency": "BEA",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
+    },
+    {
+      "series_id": "bea_sgdp_12",
+      "series_name": "State GDP \u2014 Florida",
+      "agency": "BEA",
+      "status": "unchanged",
+      "diff_count": 0,
+      "is_new": false
     },
     {
       "series_id": "bea_pinc_12",
       "series_name": "Personal income \u2014 Florida",
       "agency": "BEA",
+      "status": "unchanged",
+      "diff_count": 0,
+      "is_new": false
+    },
+    {
+      "series_id": "census_acs_poverty_2023",
+      "series_name": "ACS poverty \u2014 2023",
+      "agency": "Census",
       "status": "ok",
       "diff_count": 0,
       "is_new": true
     },
     {
-      "series_id": "census_acs_poverty_2025",
-      "series_name": "ACS state poverty \u2014 2025",
+      "series_id": "census_acs_income_2023",
+      "series_name": "ACS median income \u2014 2023",
       "agency": "Census",
-      "status": "fetch_failed",
+      "status": "ok",
       "diff_count": 0,
-      "is_new": false
+      "is_new": true
     },
     {
-      "series_id": "census_acs_income_2025",
-      "series_name": "ACS state median income \u2014 2025",
-      "agency": "Census",
-      "status": "fetch_failed",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "census_pop_2025",
-      "series_name": "State population estimates \u2014 2025",
+      "series_id": "census_pop_2023",
+      "series_name": "State population 2023",
       "agency": "Census",
       "status": "fetch_failed",
       "diff_count": 0,
@@ -227,9 +227,9 @@
       "series_id": "cdc_overdose_provisional",
       "series_name": "Provisional drug overdose deaths",
       "agency": "CDC",
-      "status": "fetch_failed",
+      "status": "ok",
       "diff_count": 0,
-      "is_new": false
+      "is_new": true
     },
     {
       "series_id": "cdc_respiratory_provisional",
@@ -243,41 +243,25 @@
       "series_id": "cdc_brfss",
       "series_name": "BRFSS behavioral risk estimates",
       "agency": "CDC",
-      "status": "fetch_failed",
+      "status": "ok",
       "diff_count": 0,
-      "is_new": false
+      "is_new": true
     },
     {
       "series_id": "epa_aqs_pm25_ca",
-      "series_name": "AQS PM2.5 annual \u2014 California",
+      "series_name": "AQS PM2.5 \u2014 California",
       "agency": "EPA",
       "status": "fetch_failed",
       "diff_count": 0,
       "is_new": false
     },
     {
-      "series_id": "epa_tri_ca_2023",
-      "series_name": "TRI toxic releases \u2014 California 2023",
+      "series_id": "epa_tri_ca_2022",
+      "series_name": "TRI toxic releases \u2014 CA 2022",
       "agency": "EPA",
-      "status": "fetch_failed",
+      "status": "ok",
       "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "hud_pit_2024",
-      "series_name": "Point-in-Time homeless count 2024",
-      "agency": "HUD",
-      "status": "fetch_failed",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "hud_fmr_metros",
-      "series_name": "Fair Market Rents \u2014 metro list",
-      "agency": "HUD",
-      "status": "fetch_failed",
-      "diff_count": 0,
-      "is_new": false
+      "is_new": true
     }
   ]
 }
