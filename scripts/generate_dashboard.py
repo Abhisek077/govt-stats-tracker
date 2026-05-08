@@ -185,6 +185,7 @@ def build():
     <div class="footer-mono">
       Last poll: {today}<br>
       Started: {started}<br>
+      <a href="https://doi.org/10.5281/zenodo.20091343" target="_blank" style="color: inherit;">DOI: 10.5281/zenodo.20091343</a><br>
       github.com/Abhisek077/govt-stats-tracker
     </div>
   </footer>
