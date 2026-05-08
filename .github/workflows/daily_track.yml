@@ -50,6 +50,7 @@ jobs:
           CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
           EPA_AQS_EMAIL:  ${{ secrets.EPA_AQS_EMAIL }}
           EPA_AQS_KEY:    ${{ secrets.EPA_AQS_KEY }}
+          HUD_API_TOKEN:  ${{ secrets.HUD_API_TOKEN }}
         run: python scripts/tracker.py
 
       - name: Generate dashboard
