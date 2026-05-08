@@ -1,10 +1,10 @@
 {
   "date": "2026-05-08",
   "total": 32,
-  "new": 0,
+  "new": 1,
   "unchanged": 30,
   "revised": 0,
-  "failed": 2,
+  "failed": 1,
   "revisions": [],
   "results": [
     {
@@ -232,12 +232,12 @@
       "is_new": false
     },
     {
-      "series_id": "cdc_weekly_mortality",
-      "series_name": "Weekly mortality by state",
+      "series_id": "cdc_weekly_flu_pneumonia",
+      "series_name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "status": "fetch_failed",
+      "status": "ok",
       "diff_count": 0,
-      "is_new": false
+      "is_new": true
     },
     {
       "series_id": "cdc_brfss",
