@@ -1,8 +1,8 @@
 {
   "date": "2026-05-08",
   "total": 32,
-  "new": 5,
-  "unchanged": 24,
+  "new": 0,
+  "unchanged": 29,
   "revised": 0,
   "failed": 3,
   "revisions": [],
@@ -203,17 +203,17 @@
       "series_id": "census_acs_poverty_2023",
       "series_name": "ACS poverty \u2014 2023",
       "agency": "Census",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "census_acs_income_2023",
       "series_name": "ACS median income \u2014 2023",
       "agency": "Census",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "census_pop_2023",
@@ -227,9 +227,9 @@
       "series_id": "cdc_overdose_provisional",
       "series_name": "Provisional drug overdose deaths",
       "agency": "CDC",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "cdc_respiratory_provisional",
@@ -243,9 +243,9 @@
       "series_id": "cdc_brfss",
       "series_name": "BRFSS behavioral risk estimates",
       "agency": "CDC",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "epa_aqs_pm25_ca",
@@ -259,9 +259,9 @@
       "series_id": "epa_tri_ca_2022",
       "series_name": "TRI toxic releases \u2014 CA 2022",
       "agency": "EPA",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     }
   ]
 }
