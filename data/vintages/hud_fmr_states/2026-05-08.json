@@ -1,0 +1,338 @@
+[
+  {
+    "category": "State",
+    "state_code": "AL",
+    "state_name": "Alabama",
+    "state_num": "1.0"
+  },
+  {
+    "category": "State",
+    "state_code": "AK",
+    "state_name": "Alaska",
+    "state_num": "2.0"
+  },
+  {
+    "category": "State",
+    "state_code": "AS",
+    "state_name": "American Samoa",
+    "state_num": "60.0"
+  },
+  {
+    "category": "State",
+    "state_code": "AZ",
+    "state_name": "Arizona",
+    "state_num": "4.0"
+  },
+  {
+    "category": "State",
+    "state_code": "AR",
+    "state_name": "Arkansas",
+    "state_num": "5.0"
+  },
+  {
+    "category": "State",
+    "state_code": "CA",
+    "state_name": "California",
+    "state_num": "6.0"
+  },
+  {
+    "category": "State",
+    "state_code": "CO",
+    "state_name": "Colorado",
+    "state_num": "8.0"
+  },
+  {
+    "category": "State",
+    "state_code": "CT",
+    "state_name": "Connecticut",
+    "state_num": "9.0"
+  },
+  {
+    "category": "State",
+    "state_code": "DE",
+    "state_name": "Delaware",
+    "state_num": "10.0"
+  },
+  {
+    "category": "State",
+    "state_code": "DC",
+    "state_name": "District of Columbia",
+    "state_num": "11.0"
+  },
+  {
+    "category": "State",
+    "state_code": "FL",
+    "state_name": "Florida",
+    "state_num": "12.0"
+  },
+  {
+    "category": "State",
+    "state_code": "GA",
+    "state_name": "Georgia",
+    "state_num": "13.0"
+  },
+  {
+    "category": "State",
+    "state_code": "GU",
+    "state_name": "Guam",
+    "state_num": "66.0"
+  },
+  {
+    "category": "State",
+    "state_code": "HI",
+    "state_name": "Hawaii",
+    "state_num": "15.0"
+  },
+  {
+    "category": "State",
+    "state_code": "ID",
+    "state_name": "Idaho",
+    "state_num": "16.0"
+  },
+  {
+    "category": "State",
+    "state_code": "IL",
+    "state_name": "Illinois",
+    "state_num": "17.0"
+  },
+  {
+    "category": "State",
+    "state_code": "IN",
+    "state_name": "Indiana",
+    "state_num": "18.0"
+  },
+  {
+    "category": "State",
+    "state_code": "IA",
+    "state_name": "Iowa",
+    "state_num": "19.0"
+  },
+  {
+    "category": "State",
+    "state_code": "KS",
+    "state_name": "Kansas",
+    "state_num": "20.0"
+  },
+  {
+    "category": "State",
+    "state_code": "KY",
+    "state_name": "Kentucky",
+    "state_num": "21.0"
+  },
+  {
+    "category": "State",
+    "state_code": "LA",
+    "state_name": "Louisiana",
+    "state_num": "22.0"
+  },
+  {
+    "category": "State",
+    "state_code": "ME",
+    "state_name": "Maine",
+    "state_num": "23.0"
+  },
+  {
+    "category": "State",
+    "state_code": "MD",
+    "state_name": "Maryland",
+    "state_num": "24.0"
+  },
+  {
+    "category": "State",
+    "state_code": "MA",
+    "state_name": "Massachusetts",
+    "state_num": "25.0"
+  },
+  {
+    "category": "State",
+    "state_code": "MI",
+    "state_name": "Michigan",
+    "state_num": "26.0"
+  },
+  {
+    "category": "State",
+    "state_code": "MN",
+    "state_name": "Minnesota",
+    "state_num": "27.0"
+  },
+  {
+    "category": "State",
+    "state_code": "MS",
+    "state_name": "Mississippi",
+    "state_num": "28.0"
+  },
+  {
+    "category": "State",
+    "state_code": "MO",
+    "state_name": "Missouri",
+    "state_num": "29.0"
+  },
+  {
+    "category": "State",
+    "state_code": "MT",
+    "state_name": "Montana",
+    "state_num": "30.0"
+  },
+  {
+    "category": "State",
+    "state_code": "NE",
+    "state_name": "Nebraska",
+    "state_num": "31.0"
+  },
+  {
+    "category": "State",
+    "state_code": "NV",
+    "state_name": "Nevada",
+    "state_num": "32.0"
+  },
+  {
+    "category": "State",
+    "state_code": "NH",
+    "state_name": "New Hampshire",
+    "state_num": "33.0"
+  },
+  {
+    "category": "State",
+    "state_code": "NJ",
+    "state_name": "New Jersey",
+    "state_num": "34.0"
+  },
+  {
+    "category": "State",
+    "state_code": "NM",
+    "state_name": "New Mexico",
+    "state_num": "35.0"
+  },
+  {
+    "category": "State",
+    "state_code": "NY",
+    "state_name": "New York",
+    "state_num": "36.0"
+  },
+  {
+    "category": "State",
+    "state_code": "NC",
+    "state_name": "North Carolina",
+    "state_num": "37.0"
+  },
+  {
+    "category": "State",
+    "state_code": "ND",
+    "state_name": "North Dakota",
+    "state_num": "38.0"
+  },
+  {
+    "category": "State",
+    "state_code": "MP",
+    "state_name": "Northern Mariana Isl",
+    "state_num": "69.0"
+  },
+  {
+    "category": "State",
+    "state_code": "OH",
+    "state_name": "Ohio",
+    "state_num": "39.0"
+  },
+  {
+    "category": "State",
+    "state_code": "OK",
+    "state_name": "Oklahoma",
+    "state_num": "40.0"
+  },
+  {
+    "category": "State",
+    "state_code": "OR",
+    "state_name": "Oregon",
+    "state_num": "41.0"
+  },
+  {
+    "category": "State",
+    "state_code": "PA",
+    "state_name": "Pennsylvania",
+    "state_num": "42.0"
+  },
+  {
+    "category": "State",
+    "state_code": "PR",
+    "state_name": "Puerto Rico",
+    "state_num": "72.0"
+  },
+  {
+    "category": "State",
+    "state_code": "RI",
+    "state_name": "Rhode Island",
+    "state_num": "44.0"
+  },
+  {
+    "category": "State",
+    "state_code": "SC",
+    "state_name": "South Carolina",
+    "state_num": "45.0"
+  },
+  {
+    "category": "State",
+    "state_code": "SD",
+    "state_name": "South Dakota",
+    "state_num": "46.0"
+  },
+  {
+    "category": "State",
+    "state_code": "TN",
+    "state_name": "Tennessee",
+    "state_num": "47.0"
+  },
+  {
+    "category": "State",
+    "state_code": "TX",
+    "state_name": "Texas",
+    "state_num": "48.0"
+  },
+  {
+    "category": "State",
+    "state_code": "UT",
+    "state_name": "Utah",
+    "state_num": "49.0"
+  },
+  {
+    "category": "State",
+    "state_code": "VT",
+    "state_name": "Vermont",
+    "state_num": "50.0"
+  },
+  {
+    "category": "State",
+    "state_code": "VI",
+    "state_name": "Virgin Islands",
+    "state_num": "78.0"
+  },
+  {
+    "category": "State",
+    "state_code": "VA",
+    "state_name": "Virginia",
+    "state_num": "51.0"
+  },
+  {
+    "category": "State",
+    "state_code": "WA",
+    "state_name": "Washington",
+    "state_num": "53.0"
+  },
+  {
+    "category": "State",
+    "state_code": "WV",
+    "state_name": "West Virginia",
+    "state_num": "54.0"
+  },
+  {
+    "category": "State",
+    "state_code": "WI",
+    "state_name": "Wisconsin",
+    "state_num": "55.0"
+  },
+  {
+    "category": "State",
+    "state_code": "WY",
+    "state_name": "Wyoming",
+    "state_num": "56.0"
+  }
+]

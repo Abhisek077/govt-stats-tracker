@@ -1,8 +1,8 @@
 {
   "date": "2026-05-08",
-  "total": 32,
-  "new": 1,
-  "unchanged": 30,
+  "total": 34,
+  "new": 2,
+  "unchanged": 31,
   "revised": 0,
   "failed": 1,
   "revisions": [],
@@ -235,9 +235,9 @@
       "series_id": "cdc_weekly_flu_pneumonia",
       "series_name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "cdc_brfss",
@@ -262,6 +262,22 @@
       "status": "unchanged",
       "diff_count": 0,
       "is_new": false
+    },
+    {
+      "series_id": "hud_fmr_states",
+      "series_name": "Fair Market Rents \u2014 states",
+      "agency": "HUD",
+      "status": "ok",
+      "diff_count": 0,
+      "is_new": true
+    },
+    {
+      "series_id": "hud_fmr_ca_detail",
+      "series_name": "Fair Market Rents \u2014 California detail",
+      "agency": "HUD",
+      "status": "ok",
+      "diff_count": 0,
+      "is_new": true
     }
   ]
 }
