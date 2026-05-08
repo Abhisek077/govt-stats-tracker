@@ -481,7 +481,7 @@ def run():
         "Weekly mortality by state",
         "CDC",
         fetch_json(
-            "https://data.cdc.gov/resource/3yf8-kanr.json?$limit=2000&$order=week_ending_date DESC"
+            "https://data.cdc.gov/resource/3yf8-kanr.json?$limit=2000&$order=week_ending_date"
         ),
         today
     ))
