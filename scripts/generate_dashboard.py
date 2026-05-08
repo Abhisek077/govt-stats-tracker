@@ -185,7 +185,7 @@ def build():
     <div class="footer-mono">
       Last poll: {today}<br>
       Started: {started}<br>
-      github.com/YOUR_USERNAME/govt-stats-tracker
+      github.com/Abhisek077/govt-stats-tracker
     </div>
   </footer>
 </div>
