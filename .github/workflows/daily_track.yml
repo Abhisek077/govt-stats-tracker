@@ -1,0 +1,66 @@
+# .github/workflows/daily_track.yml
+# ─────────────────────────────────────────────────────────────────────────────
+# Polls 20 federal data series daily, diffs against previous vintages,
+# logs revisions, regenerates public dashboard.
+#
+# SETUP: Add these as GitHub Secrets (Settings → Secrets → Actions):
+#   BLS_API_KEY      ← registrationkey from bls.gov/developers (optional but recommended)
+#   BEA_API_KEY      ← from apps.bea.gov/API/signup (required for BEA series)
+#   CENSUS_API_KEY   ← from api.census.gov/data/key_signup.html (optional)
+#   EPA_AQS_EMAIL    ← email registered with EPA AQS API
+#   EPA_AQS_KEY      ← key from aqs.epa.gov/aqsweb/documents/data_api.html
+#
+# All API keys are FREE. No credit card needed for any of them.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Daily Stats Tracker
+
+on:
+  schedule:
+    # Run at 07:00 UTC (2-3 AM ET) — after any overnight batch updates
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for proper git operations
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install python-dotenv
+
+      - name: Run tracker
+        env:
+          BLS_API_KEY:    ${{ secrets.BLS_API_KEY }}
+          BEA_API_KEY:    ${{ secrets.BEA_API_KEY }}
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+          EPA_AQS_EMAIL:  ${{ secrets.EPA_AQS_EMAIL }}
+          EPA_AQS_KEY:    ${{ secrets.EPA_AQS_KEY }}
+        run: python scripts/tracker.py
+
+      - name: Generate dashboard
+        run: python scripts/generate_dashboard.py
+
+      - name: Commit results
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name  "Stats Tracker Bot"
+          git add data/ docs/ || true
+          git diff --staged --quiet || git commit -m "📊 Poll: $(date -u +'%Y-%m-%d') — $(python -c "import json; s=json.load(open('data/latest_summary.json')); print(f\"{s.get('revised',0)} revisions detected\")")"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
