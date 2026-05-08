@@ -313,20 +313,7 @@ def run():
         today))
     time.sleep(2)
 
-    # ── HUD: Point-in-Time homeless count ────────────────────────────────
-    print("\n[HUD] Point-in-Time homeless count (2023)...")
-    if HUD_API_TOKEN:
-        results.append(process(
-            "hud_pit_2023", "PIT homeless count 2023",
-            "HUD",
-            fetch_json("https://www.huduser.gov/hudapi/public/pit?year=2023",
-                       headers={"Authorization": f"Bearer {HUD_API_TOKEN}"}),
-            today))
-    else:
-        print("  [SKIP] set HUD_API_TOKEN — free at huduser.gov/portal/datasets/pit.html")
-    time.sleep(2)
-
-    # ── HUD: Fair Market Rents ────────────────────────────────────────────
+    # ── HUD: Fair Market Rents (state list) ──────────────────────────────
     print("\n[HUD] Fair Market Rents...")
     if HUD_API_TOKEN:
         results.append(process(
@@ -336,7 +323,20 @@ def run():
                        headers={"Authorization": f"Bearer {HUD_API_TOKEN}"}),
             today))
     else:
-        print("  [SKIP] set HUD_API_TOKEN — free at huduser.gov/portal/datasets/fmr.html")
+        print("  [SKIP] set HUD_API_TOKEN")
+    time.sleep(2)
+
+    # ── HUD: Fair Market Rents (California detail) ────────────────────────
+    print("\n[HUD] Fair Market Rents — California detail...")
+    if HUD_API_TOKEN:
+        results.append(process(
+            "hud_fmr_ca_detail", "Fair Market Rents — California detail",
+            "HUD",
+            fetch_json("https://www.huduser.gov/hudapi/public/fmr/statedata/CA",
+                       headers={"Authorization": f"Bearer {HUD_API_TOKEN}"}),
+            today))
+    else:
+        print("  [SKIP] set HUD_API_TOKEN")
     time.sleep(2)
 
     # ── Summary ───────────────────────────────────────────────────────────
