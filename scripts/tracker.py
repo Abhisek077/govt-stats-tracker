@@ -252,13 +252,13 @@ def run():
         "Census", fetch_census_acs(ACS_YEAR, "B19013_001E,NAME", "state:*"), today))
     time.sleep(2)
 
-    # ── Census: Population estimates (FIX: POP not POP_2023) ─────────────
-    print("\n[Census] Population estimates (2023)...")
-    key_p = f"&key={CENSUS_API_KEY}" if CENSUS_API_KEY else ""
+    # ── Census: SAIPE poverty estimates ───────────────────────────────────
+    print("\n[Census] SAIPE poverty estimates (2023)...")
     results.append(process(
-        "census_pop_2023", "State population 2023",
+        "census_saipe_2023", "SAIPE state poverty estimates 2023",
         "Census",
-        fetch_json(f"https://api.census.gov/data/2023/pep/population?get=POP,NAME&for=state:*{key_p}"),
+        fetch_encoded("https://api.census.gov/data/timeseries/poverty/saipe",
+            {"get": "NAME,SAEPOVRT0_17_PT,SAEPOVRTALL_PT", "for": "state:*", "time": "2023"}),
         today))
     time.sleep(2)
 
@@ -271,12 +271,12 @@ def run():
         today))
     time.sleep(2)
 
-    # ── CDC: Provisional respiratory mortality (FIX: build URL manually) ──
-    print("\n[CDC] Provisional respiratory mortality...")
+    # ── CDC: Weekly mortality by state ────────────────────────────────────
+    print("\n[CDC] Weekly mortality by state...")
     results.append(process(
-        "cdc_respiratory_provisional", "Provisional respiratory mortality",
+        "cdc_weekly_mortality", "Weekly mortality by state",
         "CDC",
-        fetch_json("https://data.cdc.gov/resource/muzy-jte6.json?$limit=5000&$order=end_date%20DESC"),
+        fetch_cdc("3yf8-kanr", {"$limit": "2000", "$order": "week_ending_date DESC"}),
         today))
     time.sleep(2)
 
