@@ -6,13 +6,24 @@ Compares each pull against the last known vintage.
 Logs any numerical changes as revision events.
 """
 
-import os, json, hashlib, datetime, time, urllib.request, urllib.parse, urllib.error, csv
+import os
+import json
+import hashlib
+import datetime
+import time
+import urllib.request
+import urllib.parse
+import urllib.error
+import csv
+
 from pathlib import Path
+
 
 DATA_DIR     = Path("data/vintages")
 DIFF_LOG     = Path("data/revision_log.csv")
 META_FILE    = Path("data/meta.json")
 SUMMARY_FILE = Path("data/latest_summary.json")
+
 
 BLS_API_KEY    = os.getenv("BLS_API_KEY", "")
 BEA_API_KEY    = os.getenv("BEA_API_KEY", "")
@@ -21,39 +32,66 @@ EPA_AQS_EMAIL  = os.getenv("EPA_AQS_EMAIL", "")
 EPA_AQS_KEY    = os.getenv("EPA_AQS_KEY", "")
 HUD_API_TOKEN  = os.getenv("HUD_API_TOKEN", "")
 
+
 ACS_YEAR           = 2023
 SAMPLE_STATES      = ["06", "36", "48", "17", "12"]
-SAMPLE_STATE_NAMES = ["California", "New York", "Texas", "Illinois", "Florida"]
+SAMPLE_STATE_NAMES = [
+    "California",
+    "New York",
+    "Texas",
+    "Illinois",
+    "Florida"
+]
 
 
 # ── Fetch helpers ─────────────────────────────────────────────────────────────
 
 def fetch_json(url, headers=None, timeout=30):
+
     try:
+
         req = urllib.request.Request(url)
+
         if headers:
             for k, v in headers.items():
                 req.add_header(k, v)
+
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return json.loads(r.read().decode("utf-8"))
+
     except Exception as e:
         print(f"  [FETCH ERROR] {url[:80]}... → {e}")
         return None
 
 
 def fetch_encoded(base_url, params, headers=None, timeout=30):
-    """URL-encode params safely — but do NOT use for URLs with @ in values."""
+    """
+    URL-encode params safely.
+    Do NOT use for URLs containing @ in parameter values.
+    """
+
     url = base_url + "?" + urllib.parse.urlencode(params)
+
     return fetch_json(url, headers=headers, timeout=timeout)
 
 
 def post_json(url, payload, timeout=30):
+
     try:
+
         data = json.dumps(payload).encode("utf-8")
-        req = urllib.request.Request(url, data=data, method="POST")
+
+        req = urllib.request.Request(
+            url,
+            data=data,
+            method="POST"
+        )
+
         req.add_header("Content-Type", "application/json")
+
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return json.loads(r.read().decode("utf-8"))
+
     except Exception as e:
         print(f"  [POST ERROR] {url[:80]}... → {e}")
         return None
@@ -62,32 +100,48 @@ def post_json(url, payload, timeout=30):
 # ── Agency-specific fetchers ──────────────────────────────────────────────────
 
 def fetch_bls(series_ids):
+
     payload = {
         "seriesid":  series_ids,
         "startyear": str(datetime.date.today().year - 1),
         "endyear":   str(datetime.date.today().year),
     }
+
     if BLS_API_KEY:
         payload["registrationkey"] = BLS_API_KEY
-    return post_json("https://api.bls.gov/publicAPI/v2/timeseries/data/", payload)
+
+    return post_json(
+        "https://api.bls.gov/publicAPI/v2/timeseries/data/",
+        payload
+    )
 
 
 def fetch_bea(table, line, geo):
+
     if not BEA_API_KEY:
         print("  [SKIP] BEA — no BEA_API_KEY secret set")
         return None
 
     url = (
         f"https://apps.bea.gov/api/data/?UserID={BEA_API_KEY}"
-        f"&method=GetData&datasetname=Regional&TableName={table}"
-        f"&LineCode={line}&GeoFips={geo}&Year=LAST5&ResultFormat=JSON"
+        f"&method=GetData"
+        f"&datasetname=Regional"
+        f"&TableName={table}"
+        f"&LineCode={line}"
+        f"&GeoFips={geo}"
+        f"&Year=LAST5"
+        f"&ResultFormat=JSON"
     )
 
     return fetch_json(url)
 
 
 def fetch_census_acs(year, variables, geo):
-    params = {"get": variables, "for": geo}
+
+    params = {
+        "get": variables,
+        "for": geo
+    }
 
     if CENSUS_API_KEY:
         params["key"] = CENSUS_API_KEY
@@ -99,7 +153,7 @@ def fetch_census_acs(year, variables, geo):
 
 
 def fetch_cdc(resource_id, params):
-    """CDC Socrata — use fetch_encoded for proper param handling."""
+
     return fetch_encoded(
         f"https://data.cdc.gov/resource/{resource_id}.json",
         params
@@ -109,7 +163,13 @@ def fetch_cdc(resource_id, params):
 # ── Vintage management ────────────────────────────────────────────────────────
 
 def get_latest_vintage(series_id):
-    safe = series_id.replace("/", "_").replace(" ", "_")
+
+    safe = (
+        series_id
+        .replace("/", "_")
+        .replace(" ", "_")
+    )
+
     d = DATA_DIR / safe
 
     if not d.exists():
@@ -121,29 +181,45 @@ def get_latest_vintage(series_id):
 
 
 def save_vintage(series_id, date, data):
-    safe = series_id.replace("/", "_").replace(" ", "_")
+
+    safe = (
+        series_id
+        .replace("/", "_")
+        .replace(" ", "_")
+    )
 
     p = DATA_DIR / safe / f"{date}.json"
+
     p.parent.mkdir(parents=True, exist_ok=True)
 
-    p.write_text(json.dumps(data, indent=2, sort_keys=True))
+    p.write_text(
+        json.dumps(data, indent=2, sort_keys=True)
+    )
 
 
 def compute_hash(data):
+
     return hashlib.sha256(
-        json.dumps(data, sort_keys=True, default=str).encode()
+        json.dumps(
+            data,
+            sort_keys=True,
+            default=str
+        ).encode()
     ).hexdigest()[:16]
 
 
 def find_diffs(old, new, prefix=""):
+
     diffs = []
 
     if isinstance(old, dict) and isinstance(new, dict):
 
         for k in sorted(set(old) | set(new)):
+
             path = f"{prefix}.{k}" if prefix else k
 
             if k not in old:
+
                 diffs.append({
                     "path": path,
                     "type": "added",
@@ -152,6 +228,7 @@ def find_diffs(old, new, prefix=""):
                 })
 
             elif k not in new:
+
                 diffs.append({
                     "path": path,
                     "type": "removed",
@@ -160,14 +237,18 @@ def find_diffs(old, new, prefix=""):
                 })
 
             else:
-                diffs.extend(find_diffs(old[k], new[k], path))
+                diffs.extend(
+                    find_diffs(old[k], new[k], path)
+                )
 
     elif isinstance(old, list) and isinstance(new, list):
 
         for i in range(max(len(old), len(new))):
+
             path = f"{prefix}[{i}]"
 
             if i >= len(old):
+
                 diffs.append({
                     "path": path,
                     "type": "added",
@@ -176,6 +257,7 @@ def find_diffs(old, new, prefix=""):
                 })
 
             elif i >= len(new):
+
                 diffs.append({
                     "path": path,
                     "type": "removed",
@@ -184,10 +266,14 @@ def find_diffs(old, new, prefix=""):
                 })
 
             else:
-                diffs.extend(find_diffs(old[i], new[i], path))
+                diffs.extend(
+                    find_diffs(old[i], new[i], path)
+                )
 
     else:
+
         if str(old) != str(new):
+
             diffs.append({
                 "path": prefix,
                 "type": "changed",
@@ -199,12 +285,20 @@ def find_diffs(old, new, prefix=""):
 
 
 def log_revision(date, sid, name, agency, count, sample):
+
     exists = DIFF_LOG.exists()
 
-    with open(DIFF_LOG, "a", newline="", encoding="utf-8") as f:
+    with open(
+        DIFF_LOG,
+        "a",
+        newline="",
+        encoding="utf-8"
+    ) as f:
+
         w = csv.writer(f)
 
         if not exists:
+
             w.writerow([
                 "date",
                 "series_id",
@@ -242,12 +336,17 @@ def process(series_id, name, agency, data, today):
     prev = get_latest_vintage(series_id)
 
     if prev is None:
+
         save_vintage(series_id, today, data)
+
         r["is_new"] = True
+
         return r
 
     if compute_hash(prev) == compute_hash(data):
+
         r["status"] = "unchanged"
+
         return r
 
     diffs = find_diffs(prev, data)
@@ -271,7 +370,11 @@ def process(series_id, name, agency, data, today):
         sample
     )
 
-    print(f"  ⚠️  REVISION: {len(diffs)} changes — {sample[:120]}")
+    print(
+        f"  ⚠️  REVISION: "
+        f"{len(diffs)} changes — "
+        f"{sample[:120]}"
+    )
 
     return r
 
@@ -288,7 +391,10 @@ def run():
         f"{'='*65}"
     )
 
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    DATA_DIR.mkdir(
+        parents=True,
+        exist_ok=True
+    )
 
     results = []
 
@@ -373,7 +479,10 @@ def run():
 
     print("\n[BEA] State GDP + personal income...")
 
-    for fips, name in zip(SAMPLE_STATES, SAMPLE_STATE_NAMES):
+    for fips, name in zip(
+        SAMPLE_STATES,
+        SAMPLE_STATE_NAMES
+    ):
 
         results.append(process(
             f"bea_sgdp_{fips}",
@@ -472,16 +581,16 @@ def run():
 
     time.sleep(2)
 
-    # ── CDC: Weekly mortality by state ────────────────────────────────────
+    # ── CDC: Weekly flu/pneumonia/COVID deaths by state ──────────────────
 
-    print("\n[CDC] Weekly mortality by state...")
+    print("\n[CDC] Weekly flu/pneumonia/COVID deaths by state...")
 
     results.append(process(
-        "cdc_weekly_mortality",
-        "Weekly mortality by state",
+        "cdc_weekly_flu_pneumonia",
+        "Weekly flu/pneumonia/COVID deaths by state",
         "CDC",
         fetch_json(
-            "https://data.cdc.gov/resource/3yf8-kanr.json?$limit=2000&$order=week_ending_date"
+            "https://data.cdc.gov/resource/r8kw-7aab.json?$limit=2000"
         ),
         today
     ))
@@ -651,9 +760,14 @@ def run():
         "results": results,
     }
 
-    SUMMARY_FILE.parent.mkdir(parents=True, exist_ok=True)
+    SUMMARY_FILE.parent.mkdir(
+        parents=True,
+        exist_ok=True
+    )
 
-    SUMMARY_FILE.write_text(json.dumps(summary, indent=2))
+    SUMMARY_FILE.write_text(
+        json.dumps(summary, indent=2)
+    )
 
     meta = (
         json.loads(META_FILE.read_text())
@@ -665,16 +779,24 @@ def run():
         meta["started"] = today
 
     meta["last_run"] = today
-    meta["total_runs"] = meta.get("total_runs", 0) + 1
+
+    meta["total_runs"] = (
+        meta.get("total_runs", 0) + 1
+    )
 
     meta["total_revisions_detected"] = (
         meta.get("total_revisions_detected", 0)
         + len(revised)
     )
 
-    META_FILE.write_text(json.dumps(meta, indent=2))
+    META_FILE.write_text(
+        json.dumps(meta, indent=2)
+    )
 
-    print(f"\n✓ Done — {DATA_DIR}\n{'='*65}\n")
+    print(
+        f"\n✓ Done — {DATA_DIR}\n"
+        f"{'='*65}\n"
+    )
 
 
 if __name__ == "__main__":
