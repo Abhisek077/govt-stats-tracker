@@ -1,8 +1,8 @@
 {
   "date": "2026-05-08",
   "total": 32,
-  "new": 1,
-  "unchanged": 29,
+  "new": 0,
+  "unchanged": 30,
   "revised": 0,
   "failed": 2,
   "revisions": [],
@@ -219,9 +219,9 @@
       "series_id": "census_saipe_2023",
       "series_name": "SAIPE state poverty estimates 2023",
       "agency": "Census",
-      "status": "ok",
+      "status": "unchanged",
       "diff_count": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "series_id": "cdc_overdose_provisional",
