@@ -561,6 +561,29 @@ def run():
 
     time.sleep(2)
 
+    # ── Census: SAIPE school district poverty ─────────────────────────────
+
+    print("\n[Census] SAIPE school district poverty estimates (2023)...")
+
+    results.append(process(
+        "census_saipe_schdist_2023",
+        "SAIPE school district poverty estimates 2023",
+        "Census",
+        fetch_encoded(
+            "https://api.census.gov/data/timeseries/poverty/saipe/schdist",
+            {
+                "get": "NAME,SAEPOVRAT5_17RV_PT,SAEPOVEST5_17RV_PT",
+                "for": "school district (unified):*",
+                "in": "state:*",
+                "time": "2023",
+                **({"key": CENSUS_API_KEY} if CENSUS_API_KEY else {})
+            }
+        ),
+        today
+    ))
+
+    time.sleep(2)
+
     # ── CDC: Provisional drug overdose deaths ─────────────────────────────
 
     print("\n[CDC] Provisional drug overdose deaths...")
