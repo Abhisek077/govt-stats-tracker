@@ -1,10 +1,10 @@
 {
-  "date": "2026-05-09",
-  "total": 34,
+  "date": "2026-05-10",
+  "total": 35,
   "new": 0,
   "unchanged": 33,
   "revised": 0,
-  "failed": 1,
+  "failed": 2,
   "revisions": [],
   "results": [
     {
@@ -220,6 +220,14 @@
       "series_name": "SAIPE state poverty estimates 2023",
       "agency": "Census",
       "status": "unchanged",
+      "diff_count": 0,
+      "is_new": false
+    },
+    {
+      "series_id": "census_saipe_schdist_2023",
+      "series_name": "SAIPE school district poverty estimates 2023",
+      "agency": "Census",
+      "status": "fetch_failed",
       "diff_count": 0,
       "is_new": false
     },
