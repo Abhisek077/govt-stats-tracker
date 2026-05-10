@@ -540,7 +540,7 @@ def run():
 
     time.sleep(2)
 
-    # ── Census: SAIPE poverty estimates ───────────────────────────────────
+# ── Census: SAIPE poverty estimates ───────────────────────────────────
 
     print("\n[Census] SAIPE poverty estimates (2023)...")
 
@@ -566,20 +566,22 @@ def run():
 
     print("\n[Census] SAIPE school district poverty estimates (2023)...")
 
+    _saipe_key = f"&key={CENSUS_API_KEY}" if CENSUS_API_KEY else ""
+
+    _saipe_url = (
+        "https://api.census.gov/data/timeseries/poverty/saipe/schdist"
+        "?get=NAME,SAEPOVRAT5_17RV_PT,SAEPOVEST5_17RV_PT"
+        "&for=school%20district%20(unified):*"
+        "&in=state:*"
+        "&time=2023"
+        + _saipe_key
+    )
+
     results.append(process(
         "census_saipe_schdist_2023",
         "SAIPE school district poverty estimates 2023",
         "Census",
-        fetch_encoded(
-            "https://api.census.gov/data/timeseries/poverty/saipe/schdist",
-            {
-                "get": "NAME,SAEPOVRAT5_17RV_PT,SAEPOVEST5_17RV_PT",
-                "for": "school district (unified):*",
-                "in": "state:*",
-                "time": "2023",
-                **({"key": CENSUS_API_KEY} if CENSUS_API_KEY else {})
-            }
-        ),
+        fetch_json(_saipe_url),
         today
     ))
 
@@ -602,8 +604,6 @@ def run():
         ),
         today
     ))
-
-    time.sleep(2)
 
     # ── CDC: Weekly flu/pneumonia/COVID deaths by state ──────────────────
 
