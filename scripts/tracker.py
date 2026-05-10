@@ -553,7 +553,8 @@ def run():
             {
                 "get": "NAME,SAEPOVRT0_17_PT,SAEPOVRTALL_PT",
                 "for": "state:*",
-                "time": "2023"
+                "time": "2023",
+                **({"key": CENSUS_API_KEY} if CENSUS_API_KEY else {})
             }
         ),
         today
