@@ -567,21 +567,26 @@ def run():
     print("\n[Census] SAIPE school district poverty estimates (2023)...")
 
     _saipe_key = f"&key={CENSUS_API_KEY}" if CENSUS_API_KEY else ""
-
-    _saipe_url = (
-        "https://api.census.gov/data/timeseries/poverty/saipe/schdist"
-        "?get=NAME,SAEPOVRAT5_17RV_PT,SAEPOVEST5_17RV_PT"
-        "&for=school%20district%20(unified):*"
-        "&in=state:*"
-        "&time=2023"
-        + _saipe_key
-    )
+    _all_districts = []
+    for _fips in SAMPLE_STATES:
+        _url = (
+            "https://api.census.gov/data/timeseries/poverty/saipe/schdist"
+            "?get=SD_NAME,SAEPOV5_17RV_PT,SAEPOVRAT5_17RV_PT"
+            f"&for=school%20district%20(unified):*"
+            f"&in=state:{_fips}"
+            "&YEAR=2023"
+            + _saipe_key
+        )
+        _data = fetch_json(_url)
+        if _data:
+            _all_districts.extend(_data)
+        time.sleep(1)
 
     results.append(process(
         "census_saipe_schdist_2023",
         "SAIPE school district poverty estimates 2023",
         "Census",
-        fetch_json(_saipe_url),
+        _all_districts if _all_districts else None,
         today
     ))
 
