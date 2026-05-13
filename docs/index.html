@@ -66,9 +66,9 @@
   </header>
 
   <div class="stats">
-    <div class="stat"><div class="stat-val">4</div><div class="stat-label">Days running</div></div>
-    <div class="stat"><div class="stat-val">17</div><div class="stat-label">Total polls</div></div>
-    <div class="stat"><div class="stat-val warn">0</div><div class="stat-label">Revisions caught</div></div>
+    <div class="stat"><div class="stat-val">5</div><div class="stat-label">Days running</div></div>
+    <div class="stat"><div class="stat-val">18</div><div class="stat-label">Total polls</div></div>
+    <div class="stat"><div class="stat-val warn">3</div><div class="stat-label">Revisions caught</div></div>
     <div class="stat"><div class="stat-val">35</div><div class="stat-label">Series tracked</div></div>
   </div>
 
@@ -87,9 +87,9 @@
           <div class="agency-name">BLS</div>
           <div class="agency-stats">
             <span class="a-total">14 series</span>
-            <span class="a-rev" style="color:#64748b">0 revised</span>
+            <span class="a-rev" style="color:#f59e0b">3 revised</span>
           </div>
-          <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
+          <div class="agency-bar"><div class="agency-bar-fill" style="width:63%"></div></div>
         </div>
         <div class="agency-row">
           <div class="agency-name">CDC</div>
@@ -130,7 +130,28 @@
     <div style="overflow-x:auto">
       <table>
         <thead><tr><th>Date</th><th>Agency</th><th>Series</th><th>Changes</th><th>Sample diff</th></tr></thead>
-        <tbody><tr><td colspan="5" class="td-empty">No revisions detected yet — accumulating baseline vintages</td></tr></tbody>
+        <tbody>
+        <tr>
+          <td class="td-mono">2026-05-13</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>Metro CPI — CUURS23ASA0</td>
+          <td class="td-mono td-rev">51</td>
+          <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [0].value: 306.592 → 309.364</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-05-13</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>Metro CPI — CUURS12ASA0</td>
+          <td class="td-mono td-rev">51</td>
+          <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [0].value: 356.169 → 359.774</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-05-13</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>Metro CPI — CUURS49ASA0</td>
+          <td class="td-mono td-rev">51</td>
+          <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [0].value: 352.221 → 355.166</td>
+        </tr></tbody>
       </table>
     </div>
   </div>
@@ -144,7 +165,7 @@
       change policy conclusions, and alter historical narratives — but are not systematically recorded anywhere.
     </div>
     <div class="footer-mono">
-      Last poll: 2026-05-12<br>
+      Last poll: 2026-05-13<br>
       Started: 2026-05-08<br>
       <a href="https://doi.org/10.5281/zenodo.20091343" target="_blank" style="color: inherit;">DOI: 10.5281/zenodo.20091343</a><br>
       github.com/Abhisek077/govt-stats-tracker
