@@ -1,28 +1,16 @@
 {
-  "date": "2026-05-13",
+  "date": "2026-05-14",
   "total": 35,
   "new": 0,
-  "unchanged": 31,
-  "revised": 3,
+  "unchanged": 33,
+  "revised": 1,
   "failed": 1,
   "revisions": [
     {
-      "series": "bls_cpi_CUURS49ASA0",
-      "name": "Metro CPI \u2014 CUURS49ASA0",
-      "agency": "BLS",
-      "diffs": 51
-    },
-    {
-      "series": "bls_cpi_CUURS12ASA0",
-      "name": "Metro CPI \u2014 CUURS12ASA0",
-      "agency": "BLS",
-      "diffs": 51
-    },
-    {
-      "series": "bls_cpi_CUURS23ASA0",
-      "name": "Metro CPI \u2014 CUURS23ASA0",
-      "agency": "BLS",
-      "diffs": 51
+      "series": "cdc_overdose_provisional",
+      "name": "Provisional drug overdose deaths",
+      "agency": "CDC",
+      "diffs": 26991
     }
   ],
   "results": [
@@ -110,16 +98,16 @@
       "series_id": "bls_cpi_CUURS49ASA0",
       "series_name": "Metro CPI \u2014 CUURS49ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 51,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS12ASA0",
       "series_name": "Metro CPI \u2014 CUURS12ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 51,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
@@ -134,8 +122,8 @@
       "series_id": "bls_cpi_CUURS23ASA0",
       "series_name": "Metro CPI \u2014 CUURS23ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 51,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
@@ -254,8 +242,8 @@
       "series_id": "cdc_overdose_provisional",
       "series_name": "Provisional drug overdose deaths",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 26991,
       "is_new": false
     },
     {
