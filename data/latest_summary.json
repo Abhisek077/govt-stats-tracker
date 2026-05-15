@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-14",
+  "date": "2026-05-15",
   "total": 35,
   "new": 0,
   "unchanged": 33,
@@ -7,10 +7,10 @@
   "failed": 1,
   "revisions": [
     {
-      "series": "cdc_overdose_provisional",
-      "name": "Provisional drug overdose deaths",
+      "series": "cdc_weekly_flu_pneumonia",
+      "name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "diffs": 26991
+      "diffs": 18391
     }
   ],
   "results": [
@@ -242,16 +242,16 @@
       "series_id": "cdc_overdose_provisional",
       "series_name": "Provisional drug overdose deaths",
       "agency": "CDC",
-      "status": "REVISED",
-      "diff_count": 26991,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "cdc_weekly_flu_pneumonia",
       "series_name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 18391,
       "is_new": false
     },
     {

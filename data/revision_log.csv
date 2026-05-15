@@ -3,3 +3,4 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-05-13,bls_cpi_CUURS12ASA0,Metro CPI — CUURS12ASA0,BLS,51,[0].period: M03 → M04; [0].periodName: March → April; [0].value: 356.169 → 359.774
 2026-05-13,bls_cpi_CUURS23ASA0,Metro CPI — CUURS23ASA0,BLS,51,[0].period: M03 → M04; [0].periodName: March → April; [0].value: 306.592 → 309.364
 2026-05-14,cdc_overdose_provisional,Provisional drug overdose deaths,CDC,26991,"[0].data_value: 64 → 252; [0].indicator: Methadone (T40.3) → Natural & semi-synthetic opioids, incl. methadone (T40.2, T40.3); [0].percent_pending_investigation: 0.374170652677056 → 0.282930735"
+2026-05-15,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,18391,[0].data_as_of: 2026-05-07T00:00:00.000 → 2026-05-14T00:00:00.000; [1].data_as_of: 2026-05-07T00:00:00.000 → 2026-05-14T00:00:00.000; [2].data_as_of: 2026-05-07T00:00:00.000 → 2026-05-14T00:00:00.000
