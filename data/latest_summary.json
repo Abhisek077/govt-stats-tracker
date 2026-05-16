@@ -1,18 +1,11 @@
 {
-  "date": "2026-05-15",
+  "date": "2026-05-16",
   "total": 35,
   "new": 0,
-  "unchanged": 33,
-  "revised": 1,
+  "unchanged": 34,
+  "revised": 0,
   "failed": 1,
-  "revisions": [
-    {
-      "series": "cdc_weekly_flu_pneumonia",
-      "name": "Weekly flu/pneumonia/COVID deaths by state",
-      "agency": "CDC",
-      "diffs": 18391
-    }
-  ],
+  "revisions": [],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
@@ -250,8 +243,8 @@
       "series_id": "cdc_weekly_flu_pneumonia",
       "series_name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "status": "REVISED",
-      "diff_count": 18391,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
