@@ -1,50 +1,81 @@
 {
-  "date": "2026-05-19",
+  "date": "2026-05-20",
   "total": 35,
   "new": 0,
-  "unchanged": 34,
-  "revised": 0,
+  "unchanged": 29,
+  "revised": 5,
   "failed": 1,
-  "revisions": [],
+  "revisions": [
+    {
+      "series": "bls_laus_LASST060000000000003",
+      "name": "State unemployment \u2014 LASST060000000000003",
+      "agency": "BLS",
+      "diffs": 11
+    },
+    {
+      "series": "bls_laus_LASST360000000000003",
+      "name": "State unemployment \u2014 LASST360000000000003",
+      "agency": "BLS",
+      "diffs": 11
+    },
+    {
+      "series": "bls_laus_LASST480000000000003",
+      "name": "State unemployment \u2014 LASST480000000000003",
+      "agency": "BLS",
+      "diffs": 11
+    },
+    {
+      "series": "bls_laus_LASST170000000000003",
+      "name": "State unemployment \u2014 LASST170000000000003",
+      "agency": "BLS",
+      "diffs": 11
+    },
+    {
+      "series": "bls_laus_LASST120000000000003",
+      "name": "State unemployment \u2014 LASST120000000000003",
+      "agency": "BLS",
+      "diffs": 11
+    }
+  ],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
       "series_name": "State unemployment \u2014 LASST060000000000003",
       "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 11,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST360000000000003",
       "series_name": "State unemployment \u2014 LASST360000000000003",
       "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 11,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST480000000000003",
       "series_name": "State unemployment \u2014 LASST480000000000003",
       "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 11,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST170000000000003",
       "series_name": "State unemployment \u2014 LASST170000000000003",
       "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 11,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST120000000000003",
       "series_name": "State unemployment \u2014 LASST120000000000003",
       "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 11,
       "is_new": false
     },
     {
