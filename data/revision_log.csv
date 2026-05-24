@@ -20,3 +20,4 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-05-23,bls_ces_SMS48000000000000001,State payroll — SMS48000000000000001,BLS,47,[0].period: M03 → M04; [0].periodName: March → April; [0].value: 14403.5 → 14394.3
 2026-05-23,bls_ces_SMS17000000000000001,State payroll — SMS17000000000000001,BLS,47,[0].period: M03 → M04; [0].periodName: March → April; [0].value: 6145.5 → 6158.8
 2026-05-23,bls_ces_SMS12000000000000001,State payroll — SMS12000000000000001,BLS,47,[0].period: M03 → M04; [0].periodName: March → April; [0].value: 9993.2 → 10032.9
+2026-05-24,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca
