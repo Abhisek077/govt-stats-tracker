@@ -23,3 +23,4 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-05-24,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca
 2026-05-25,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: ca → CA; data.counties[1].statecode: ca → CA; data.counties[2].statecode: ca → CA
 2026-05-29,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,18315,[0].data_as_of: 2026-05-21T00:00:00.000 → 2026-05-28T00:00:00.000; [1].data_as_of: 2026-05-21T00:00:00.000 → 2026-05-28T00:00:00.000; [2].data_as_of: 2026-05-21T00:00:00.000 → 2026-05-28T00:00:00.000
+2026-05-31,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca
