@@ -1,124 +1,19 @@
 {
-  "date": "2026-06-02",
-  "total": 35,
+  "date": "2026-06-03",
+  "total": 21,
   "new": 0,
-  "unchanged": 34,
-  "revised": 0,
+  "unchanged": 19,
+  "revised": 1,
   "failed": 1,
-  "revisions": [],
+  "revisions": [
+    {
+      "series": "hud_fmr_ca_detail",
+      "name": "Fair Market Rents \u2014 California detail",
+      "agency": "HUD",
+      "diffs": 88
+    }
+  ],
   "results": [
-    {
-      "series_id": "bls_laus_LASST060000000000003",
-      "series_name": "State unemployment \u2014 LASST060000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST360000000000003",
-      "series_name": "State unemployment \u2014 LASST360000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST480000000000003",
-      "series_name": "State unemployment \u2014 LASST480000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST170000000000003",
-      "series_name": "State unemployment \u2014 LASST170000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST120000000000003",
-      "series_name": "State unemployment \u2014 LASST120000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_ces_SMS06000000000000001",
-      "series_name": "State payroll \u2014 SMS06000000000000001",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_ces_SMS36000000000000001",
-      "series_name": "State payroll \u2014 SMS36000000000000001",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_ces_SMS48000000000000001",
-      "series_name": "State payroll \u2014 SMS48000000000000001",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_ces_SMS17000000000000001",
-      "series_name": "State payroll \u2014 SMS17000000000000001",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_ces_SMS12000000000000001",
-      "series_name": "State payroll \u2014 SMS12000000000000001",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_cpi_CUURS49ASA0",
-      "series_name": "Metro CPI \u2014 CUURS49ASA0",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_cpi_CUURS12ASA0",
-      "series_name": "Metro CPI \u2014 CUURS12ASA0",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_cpi_CUURS35ASA0",
-      "series_name": "Metro CPI \u2014 CUURS35ASA0",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_cpi_CUURS23ASA0",
-      "series_name": "Metro CPI \u2014 CUURS23ASA0",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
     {
       "series_id": "bea_sgdp_06",
       "series_name": "State GDP \u2014 California",
@@ -283,8 +178,8 @@
       "series_id": "hud_fmr_ca_detail",
       "series_name": "Fair Market Rents \u2014 California detail",
       "agency": "HUD",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 88,
       "is_new": false
     }
   ]
