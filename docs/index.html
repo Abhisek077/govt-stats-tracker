@@ -66,9 +66,9 @@
   </header>
 
   <div class="stats">
-    <div class="stat"><div class="stat-val">33</div><div class="stat-label">Days running</div></div>
-    <div class="stat"><div class="stat-val">45</div><div class="stat-label">Total polls</div></div>
-    <div class="stat"><div class="stat-val warn">30</div><div class="stat-label">Revisions caught</div></div>
+    <div class="stat"><div class="stat-val">34</div><div class="stat-label">Days running</div></div>
+    <div class="stat"><div class="stat-val">46</div><div class="stat-label">Total polls</div></div>
+    <div class="stat"><div class="stat-val warn">35</div><div class="stat-label">Revisions caught</div></div>
     <div class="stat"><div class="stat-val">35</div><div class="stat-label">Series tracked</div></div>
   </div>
 
@@ -87,9 +87,9 @@
           <div class="agency-name">BLS</div>
           <div class="agency-stats">
             <span class="a-total">14 series</span>
-            <span class="a-rev" style="color:#64748b">0 revised</span>
+            <span class="a-rev" style="color:#f59e0b">4 revised</span>
           </div>
-          <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
+          <div class="agency-bar"><div class="agency-bar-fill" style="width:87%"></div></div>
         </div>
         <div class="agency-row">
           <div class="agency-name">CDC</div>
@@ -119,9 +119,9 @@
           <div class="agency-name">HUD</div>
           <div class="agency-stats">
             <span class="a-total">2 series</span>
-            <span class="a-rev" style="color:#64748b">0 revised</span>
+            <span class="a-rev" style="color:#f59e0b">1 revised</span>
           </div>
-          <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
+          <div class="agency-bar"><div class="agency-bar-fill" style="width:100%"></div></div>
         </div>
   </div>
 
@@ -131,6 +131,41 @@
       <table>
         <thead><tr><th>Date</th><th>Agency</th><th>Series</th><th>Changes</th><th>Sample diff</th></tr></thead>
         <tbody>
+        <tr>
+          <td class="td-mono">2026-06-11</td>
+          <td><span class="agency-badge">HUD</span></td>
+          <td>Fair Market Rents — California detail</td>
+          <td class="td-mono td-rev">88</td>
+          <td class="td-sample">data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-06-11</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>Metro CPI — CUURS23ASA0</td>
+          <td class="td-mono td-rev">54</td>
+          <td class="td-sample">[0].period: M04 → M05; [0].periodName: April → May; [0].value: 309.364 → 312.867</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-06-11</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>Metro CPI — CUURS35ASA0</td>
+          <td class="td-mono td-rev">26</td>
+          <td class="td-sample">[0].period: M03 → M05; [0].periodName: March → May; [0].value: 330.277 → 334.707</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-06-11</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>Metro CPI — CUURS12ASA0</td>
+          <td class="td-mono td-rev">54</td>
+          <td class="td-sample">[0].period: M04 → M05; [0].periodName: April → May; [0].value: 359.774 → 361.362</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-06-11</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>Metro CPI — CUURS49ASA0</td>
+          <td class="td-mono td-rev">54</td>
+          <td class="td-sample">[0].period: M04 → M05; [0].periodName: April → May; [0].value: 355.166 → 355.336</td>
+        </tr>
         <tr>
           <td class="td-mono">2026-06-09</td>
           <td><span class="agency-badge">HUD</span></td>
@@ -235,41 +270,6 @@
           <td>State unemployment — LASST120000000000003</td>
           <td class="td-mono td-rev">50</td>
           <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [0].value: 4.7 → 4.8</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-05-23</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST170000000000003</td>
-          <td class="td-mono td-rev">48</td>
-          <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [1].period: M02 → M03</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-05-23</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST480000000000003</td>
-          <td class="td-mono td-rev">42</td>
-          <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [1].period: M02 → M03</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-05-23</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST360000000000003</td>
-          <td class="td-mono td-rev">45</td>
-          <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [1].period: M02 → M03</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-05-23</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST060000000000003</td>
-          <td class="td-mono td-rev">43</td>
-          <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [1].period: M02 → M03</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-05-22</td>
-          <td><span class="agency-badge">CDC</span></td>
-          <td>Weekly flu/pneumonia/COVID deaths by state</td>
-          <td class="td-mono td-rev">18363</td>
-          <td class="td-sample">[0].data_as_of: 2026-05-14T00:00:00.000 → 2026-05-21T00:00:00.000; [1].data_as_of: 2026-05-14T00:00:00.000 → 2026-05-21T</td>
         </tr></tbody>
       </table>
     </div>
@@ -284,7 +284,7 @@
       change policy conclusions, and alter historical narratives — but are not systematically recorded anywhere.
     </div>
     <div class="footer-mono">
-      Last poll: 2026-06-10<br>
+      Last poll: 2026-06-11<br>
       Started: 2026-05-08<br>
       <a href="https://doi.org/10.5281/zenodo.20091343" target="_blank" style="color: inherit;">DOI: 10.5281/zenodo.20091343</a><br>
       github.com/Abhisek077/govt-stats-tracker

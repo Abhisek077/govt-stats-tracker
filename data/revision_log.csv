@@ -29,3 +29,8 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-06-05,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: ca → CA; data.counties[1].statecode: ca → CA; data.counties[2].statecode: ca → CA
 2026-06-07,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca
 2026-06-09,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: ca → CA; data.counties[1].statecode: ca → CA; data.counties[2].statecode: ca → CA
+2026-06-11,bls_cpi_CUURS49ASA0,Metro CPI — CUURS49ASA0,BLS,54,[0].period: M04 → M05; [0].periodName: April → May; [0].value: 355.166 → 355.336
+2026-06-11,bls_cpi_CUURS12ASA0,Metro CPI — CUURS12ASA0,BLS,54,[0].period: M04 → M05; [0].periodName: April → May; [0].value: 359.774 → 361.362
+2026-06-11,bls_cpi_CUURS35ASA0,Metro CPI — CUURS35ASA0,BLS,26,[0].period: M03 → M05; [0].periodName: March → May; [0].value: 330.277 → 334.707
+2026-06-11,bls_cpi_CUURS23ASA0,Metro CPI — CUURS23ASA0,BLS,54,[0].period: M04 → M05; [0].periodName: April → May; [0].value: 309.364 → 312.867
+2026-06-11,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca
