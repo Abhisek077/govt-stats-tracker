@@ -34,3 +34,5 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-06-11,bls_cpi_CUURS35ASA0,Metro CPI — CUURS35ASA0,BLS,26,[0].period: M03 → M05; [0].periodName: March → May; [0].value: 330.277 → 334.707
 2026-06-11,bls_cpi_CUURS23ASA0,Metro CPI — CUURS23ASA0,BLS,54,[0].period: M04 → M05; [0].periodName: April → May; [0].value: 309.364 → 312.867
 2026-06-11,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca
+2026-06-12,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,18771,[0].data_as_of: 2026-05-28T00:00:00.000 → 2026-06-11T00:00:00.000; [1].data_as_of: 2026-05-28T00:00:00.000 → 2026-06-11T00:00:00.000; [2].data_as_of: 2026-05-28T00:00:00.000 → 2026-06-11T00:00:00.000
+2026-06-12,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: ca → CA; data.counties[1].statecode: ca → CA; data.counties[2].statecode: ca → CA

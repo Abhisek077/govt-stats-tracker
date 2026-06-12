@@ -1,34 +1,16 @@
 {
-  "date": "2026-06-11",
+  "date": "2026-06-12",
   "total": 35,
   "new": 0,
-  "unchanged": 29,
-  "revised": 5,
+  "unchanged": 32,
+  "revised": 2,
   "failed": 1,
   "revisions": [
     {
-      "series": "bls_cpi_CUURS49ASA0",
-      "name": "Metro CPI \u2014 CUURS49ASA0",
-      "agency": "BLS",
-      "diffs": 54
-    },
-    {
-      "series": "bls_cpi_CUURS12ASA0",
-      "name": "Metro CPI \u2014 CUURS12ASA0",
-      "agency": "BLS",
-      "diffs": 54
-    },
-    {
-      "series": "bls_cpi_CUURS35ASA0",
-      "name": "Metro CPI \u2014 CUURS35ASA0",
-      "agency": "BLS",
-      "diffs": 26
-    },
-    {
-      "series": "bls_cpi_CUURS23ASA0",
-      "name": "Metro CPI \u2014 CUURS23ASA0",
-      "agency": "BLS",
-      "diffs": 54
+      "series": "cdc_weekly_flu_pneumonia",
+      "name": "Weekly flu/pneumonia/COVID deaths by state",
+      "agency": "CDC",
+      "diffs": 18771
     },
     {
       "series": "hud_fmr_ca_detail",
@@ -122,32 +104,32 @@
       "series_id": "bls_cpi_CUURS49ASA0",
       "series_name": "Metro CPI \u2014 CUURS49ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 54,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS12ASA0",
       "series_name": "Metro CPI \u2014 CUURS12ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 54,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS35ASA0",
       "series_name": "Metro CPI \u2014 CUURS35ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 26,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS23ASA0",
       "series_name": "Metro CPI \u2014 CUURS23ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 54,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
@@ -274,8 +256,8 @@
       "series_id": "cdc_weekly_flu_pneumonia",
       "series_name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 18771,
       "is_new": false
     },
     {

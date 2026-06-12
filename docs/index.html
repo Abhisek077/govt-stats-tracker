@@ -66,9 +66,9 @@
   </header>
 
   <div class="stats">
-    <div class="stat"><div class="stat-val">34</div><div class="stat-label">Days running</div></div>
-    <div class="stat"><div class="stat-val">46</div><div class="stat-label">Total polls</div></div>
-    <div class="stat"><div class="stat-val warn">35</div><div class="stat-label">Revisions caught</div></div>
+    <div class="stat"><div class="stat-val">35</div><div class="stat-label">Days running</div></div>
+    <div class="stat"><div class="stat-val">47</div><div class="stat-label">Total polls</div></div>
+    <div class="stat"><div class="stat-val warn">37</div><div class="stat-label">Revisions caught</div></div>
     <div class="stat"><div class="stat-val">35</div><div class="stat-label">Series tracked</div></div>
   </div>
 
@@ -87,17 +87,17 @@
           <div class="agency-name">BLS</div>
           <div class="agency-stats">
             <span class="a-total">14 series</span>
-            <span class="a-rev" style="color:#f59e0b">4 revised</span>
+            <span class="a-rev" style="color:#64748b">0 revised</span>
           </div>
-          <div class="agency-bar"><div class="agency-bar-fill" style="width:87%"></div></div>
+          <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
         </div>
         <div class="agency-row">
           <div class="agency-name">CDC</div>
           <div class="agency-stats">
             <span class="a-total">3 series</span>
-            <span class="a-rev" style="color:#64748b">0 revised</span>
+            <span class="a-rev" style="color:#f59e0b">1 revised</span>
           </div>
-          <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
+          <div class="agency-bar"><div class="agency-bar-fill" style="width:99%"></div></div>
         </div>
         <div class="agency-row">
           <div class="agency-name">Census</div>
@@ -131,6 +131,20 @@
       <table>
         <thead><tr><th>Date</th><th>Agency</th><th>Series</th><th>Changes</th><th>Sample diff</th></tr></thead>
         <tbody>
+        <tr>
+          <td class="td-mono">2026-06-12</td>
+          <td><span class="agency-badge">HUD</span></td>
+          <td>Fair Market Rents — California detail</td>
+          <td class="td-mono td-rev">88</td>
+          <td class="td-sample">data.counties[0].statecode: ca → CA; data.counties[1].statecode: ca → CA; data.counties[2].statecode: ca → CA</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-06-12</td>
+          <td><span class="agency-badge">CDC</span></td>
+          <td>Weekly flu/pneumonia/COVID deaths by state</td>
+          <td class="td-mono td-rev">18771</td>
+          <td class="td-sample">[0].data_as_of: 2026-05-28T00:00:00.000 → 2026-06-11T00:00:00.000; [1].data_as_of: 2026-05-28T00:00:00.000 → 2026-06-11T</td>
+        </tr>
         <tr>
           <td class="td-mono">2026-06-11</td>
           <td><span class="agency-badge">HUD</span></td>
@@ -256,20 +270,6 @@
           <td>State payroll — SMS36000000000000001</td>
           <td class="td-mono td-rev">47</td>
           <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [0].value: 9978.5 → 9968.4</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-05-23</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State payroll — SMS06000000000000001</td>
-          <td class="td-mono td-rev">47</td>
-          <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [0].value: 18154.2 → 18159.7</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-05-23</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST120000000000003</td>
-          <td class="td-mono td-rev">50</td>
-          <td class="td-sample">[0].period: M03 → M04; [0].periodName: March → April; [0].value: 4.7 → 4.8</td>
         </tr></tbody>
       </table>
     </div>
@@ -284,7 +284,7 @@
       change policy conclusions, and alter historical narratives — but are not systematically recorded anywhere.
     </div>
     <div class="footer-mono">
-      Last poll: 2026-06-11<br>
+      Last poll: 2026-06-12<br>
       Started: 2026-05-08<br>
       <a href="https://doi.org/10.5281/zenodo.20091343" target="_blank" style="color: inherit;">DOI: 10.5281/zenodo.20091343</a><br>
       github.com/Abhisek077/govt-stats-tracker
