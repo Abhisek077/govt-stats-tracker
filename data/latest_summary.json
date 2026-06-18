@@ -1,11 +1,17 @@
 {
-  "date": "2026-06-17",
+  "date": "2026-06-18",
   "total": 35,
   "new": 0,
-  "unchanged": 33,
-  "revised": 1,
+  "unchanged": 32,
+  "revised": 2,
   "failed": 1,
   "revisions": [
+    {
+      "series": "cdc_overdose_provisional",
+      "name": "Provisional drug overdose deaths",
+      "agency": "CDC",
+      "diffs": 35391
+    },
     {
       "series": "hud_fmr_ca_detail",
       "name": "Fair Market Rents \u2014 California detail",
@@ -242,8 +248,8 @@
       "series_id": "cdc_overdose_provisional",
       "series_name": "Provisional drug overdose deaths",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 35391,
       "is_new": false
     },
     {
