@@ -40,3 +40,4 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-06-17,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: ca → CA; data.counties[1].statecode: ca → CA; data.counties[2].statecode: ca → CA
 2026-06-18,cdc_overdose_provisional,Provisional drug overdose deaths,CDC,35391,"[0].data_value: 252 → 1235; [0].indicator: Natural & semi-synthetic opioids, incl. methadone (T40.2, T40.3) → Synthetic opioids, excl. methadone (T40.4); [0].month: September → January"
 2026-06-18,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca
+2026-06-19,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: ca → CA; data.counties[1].statecode: ca → CA; data.counties[2].statecode: ca → CA
