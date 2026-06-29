@@ -1,18 +1,11 @@
 {
-  "date": "2026-06-28",
+  "date": "2026-06-29",
   "total": 35,
   "new": 0,
-  "unchanged": 33,
-  "revised": 1,
+  "unchanged": 34,
+  "revised": 0,
   "failed": 1,
-  "revisions": [
-    {
-      "series": "hud_fmr_ca_detail",
-      "name": "Fair Market Rents \u2014 California detail",
-      "agency": "HUD",
-      "diffs": 88
-    }
-  ],
+  "revisions": [],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
@@ -290,8 +283,8 @@
       "series_id": "hud_fmr_ca_detail",
       "series_name": "Fair Market Rents \u2014 California detail",
       "agency": "HUD",
-      "status": "REVISED",
-      "diff_count": 88,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     }
   ]
