@@ -1,11 +1,24 @@
 {
-  "date": "2026-07-09",
+  "date": "2026-07-10",
   "total": 35,
   "new": 0,
-  "unchanged": 34,
-  "revised": 0,
+  "unchanged": 32,
+  "revised": 2,
   "failed": 1,
-  "revisions": [],
+  "revisions": [
+    {
+      "series": "cdc_weekly_flu_pneumonia",
+      "name": "Weekly flu/pneumonia/COVID deaths by state",
+      "agency": "CDC",
+      "diffs": 18679
+    },
+    {
+      "series": "hud_fmr_ca_detail",
+      "name": "Fair Market Rents \u2014 California detail",
+      "agency": "HUD",
+      "diffs": 88
+    }
+  ],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
@@ -243,8 +256,8 @@
       "series_id": "cdc_weekly_flu_pneumonia",
       "series_name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 18679,
       "is_new": false
     },
     {
@@ -283,8 +296,8 @@
       "series_id": "hud_fmr_ca_detail",
       "series_name": "Fair Market Rents \u2014 California detail",
       "agency": "HUD",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 88,
       "is_new": false
     }
   ]
