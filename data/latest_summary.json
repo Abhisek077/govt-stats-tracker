@@ -1,18 +1,11 @@
 {
-  "date": "2026-07-19",
-  "total": 31,
+  "date": "2026-07-20",
+  "total": 35,
   "new": 0,
-  "unchanged": 29,
-  "revised": 1,
-  "failed": 1,
-  "revisions": [
-    {
-      "series": "hud_fmr_ca_detail",
-      "name": "Fair Market Rents \u2014 California detail",
-      "agency": "HUD",
-      "diffs": 88
-    }
-  ],
+  "unchanged": 31,
+  "revised": 0,
+  "failed": 4,
+  "revisions": [],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
@@ -95,10 +88,42 @@
       "is_new": false
     },
     {
+      "series_id": "bls_cpi_CUURS49ASA0",
+      "series_name": "Metro CPI \u2014 CUURS49ASA0",
+      "agency": "BLS",
+      "status": "unchanged",
+      "diff_count": 0,
+      "is_new": false
+    },
+    {
+      "series_id": "bls_cpi_CUURS12ASA0",
+      "series_name": "Metro CPI \u2014 CUURS12ASA0",
+      "agency": "BLS",
+      "status": "unchanged",
+      "diff_count": 0,
+      "is_new": false
+    },
+    {
+      "series_id": "bls_cpi_CUURS35ASA0",
+      "series_name": "Metro CPI \u2014 CUURS35ASA0",
+      "agency": "BLS",
+      "status": "unchanged",
+      "diff_count": 0,
+      "is_new": false
+    },
+    {
+      "series_id": "bls_cpi_CUURS23ASA0",
+      "series_name": "Metro CPI \u2014 CUURS23ASA0",
+      "agency": "BLS",
+      "status": "unchanged",
+      "diff_count": 0,
+      "is_new": false
+    },
+    {
       "series_id": "bea_sgdp_06",
       "series_name": "State GDP \u2014 California",
       "agency": "BEA",
-      "status": "unchanged",
+      "status": "fetch_failed",
       "diff_count": 0,
       "is_new": false
     },
@@ -106,7 +131,7 @@
       "series_id": "bea_pinc_06",
       "series_name": "Personal income \u2014 California",
       "agency": "BEA",
-      "status": "unchanged",
+      "status": "fetch_failed",
       "diff_count": 0,
       "is_new": false
     },
@@ -154,7 +179,7 @@
       "series_id": "bea_pinc_17",
       "series_name": "Personal income \u2014 Illinois",
       "agency": "BEA",
-      "status": "unchanged",
+      "status": "fetch_failed",
       "diff_count": 0,
       "is_new": false
     },
@@ -258,8 +283,8 @@
       "series_id": "hud_fmr_ca_detail",
       "series_name": "Fair Market Rents \u2014 California detail",
       "agency": "HUD",
-      "status": "REVISED",
-      "diff_count": 88,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     }
   ]
