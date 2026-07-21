@@ -1,52 +1,19 @@
 {
-  "date": "2026-07-20",
-  "total": 35,
+  "date": "2026-07-21",
+  "total": 30,
   "new": 0,
-  "unchanged": 31,
-  "revised": 0,
+  "unchanged": 25,
+  "revised": 1,
   "failed": 4,
-  "revisions": [],
+  "revisions": [
+    {
+      "series": "cdc_brfss",
+      "name": "BRFSS behavioral risk estimates",
+      "agency": "CDC",
+      "diffs": 58311
+    }
+  ],
   "results": [
-    {
-      "series_id": "bls_laus_LASST060000000000003",
-      "series_name": "State unemployment \u2014 LASST060000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST360000000000003",
-      "series_name": "State unemployment \u2014 LASST360000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST480000000000003",
-      "series_name": "State unemployment \u2014 LASST480000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST170000000000003",
-      "series_name": "State unemployment \u2014 LASST170000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST120000000000003",
-      "series_name": "State unemployment \u2014 LASST120000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
     {
       "series_id": "bls_ces_SMS06000000000000001",
       "series_name": "State payroll \u2014 SMS06000000000000001",
@@ -123,7 +90,7 @@
       "series_id": "bea_sgdp_06",
       "series_name": "State GDP \u2014 California",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -171,7 +138,7 @@
       "series_id": "bea_sgdp_17",
       "series_name": "State GDP \u2014 Illinois",
       "agency": "BEA",
-      "status": "unchanged",
+      "status": "fetch_failed",
       "diff_count": 0,
       "is_new": false
     },
@@ -179,7 +146,7 @@
       "series_id": "bea_pinc_17",
       "series_name": "Personal income \u2014 Illinois",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -251,8 +218,8 @@
       "series_id": "cdc_brfss",
       "series_name": "BRFSS behavioral risk estimates",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 58311,
       "is_new": false
     },
     {
@@ -267,7 +234,7 @@
       "series_id": "epa_tri_ca_2022",
       "series_name": "TRI toxic releases \u2014 CA 2022",
       "agency": "EPA",
-      "status": "unchanged",
+      "status": "fetch_failed",
       "diff_count": 0,
       "is_new": false
     },
