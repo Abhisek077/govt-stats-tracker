@@ -80,3 +80,8 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-07-26,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: ca → CA; data.counties[1].statecode: ca → CA; data.counties[2].statecode: ca → CA
 2026-07-31,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,18141,[0].data_as_of: 2026-07-23T00:00:00.000 → 2026-07-30T00:00:00.000; [1].data_as_of: 2026-07-23T00:00:00.000 → 2026-07-30T00:00:00.000; [2].data_as_of: 2026-07-23T00:00:00.000 → 2026-07-30T00:00:00.000
 2026-08-09,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca
+2026-08-13,bls_cpi_CUURS49ASA0,Metro CPI — CUURS49ASA0,BLS,60,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 354.325 → 355.311
+2026-08-13,bls_cpi_CUURS12ASA0,Metro CPI — CUURS12ASA0,BLS,60,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 360.529 → 362.189
+2026-08-13,bls_cpi_CUURS35ASA0,Metro CPI — CUURS35ASA0,BLS,29,[0].period: M05 → M07; [0].periodName: May → July; [0].value: 334.707 → 335.716
+2026-08-13,bls_cpi_CUURS23ASA0,Metro CPI — CUURS23ASA0,BLS,60,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 309.915 → 309.462
+2026-08-13,cdc_overdose_provisional,Provisional drug overdose deaths,CDC,36617,[0].data_value: 84 → 16; [0].indicator: Number of Drug Overdose Deaths → Methadone (T40.3); [0].month: January → March
