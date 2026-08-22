@@ -88,3 +88,13 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-08-14,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,18771,[0].data_as_of: 2026-07-30T00:00:00.000 → 2026-08-13T00:00:00.000; [1].data_as_of: 2026-07-30T00:00:00.000 → 2026-08-13T00:00:00.000; [2].data_as_of: 2026-07-30T00:00:00.000 → 2026-08-13T00:00:00.000
 2026-08-16,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: ca → CA; data.counties[1].statecode: ca → CA; data.counties[2].statecode: ca → CA
 2026-08-21,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,18052,[0].data_as_of: 2026-08-13T00:00:00.000 → 2026-08-20T00:00:00.000; [1].data_as_of: 2026-08-13T00:00:00.000 → 2026-08-20T00:00:00.000; [2].data_as_of: 2026-08-13T00:00:00.000 → 2026-08-20T00:00:00.000
+2026-08-22,bls_laus_LASST060000000000003,State unemployment — LASST060000000000003,BLS,51,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 5.2 → 5.1
+2026-08-22,bls_laus_LASST360000000000003,State unemployment — LASST360000000000003,BLS,52,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 4.6 → 4.4
+2026-08-22,bls_laus_LASST480000000000003,State unemployment — LASST480000000000003,BLS,50,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 4.4 → 4.5
+2026-08-22,bls_laus_LASST170000000000003,State unemployment — LASST170000000000003,BLS,55,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 5.1 → 4.9
+2026-08-22,bls_laus_LASST120000000000003,State unemployment — LASST120000000000003,BLS,58,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 4.7 → 4.6
+2026-08-22,bls_ces_SMS06000000000000001,State payroll — SMS06000000000000001,BLS,55,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 18144.5 → 18133.0
+2026-08-22,bls_ces_SMS36000000000000001,State payroll — SMS36000000000000001,BLS,56,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 9992.8 → 9960.7
+2026-08-22,bls_ces_SMS48000000000000001,State payroll — SMS48000000000000001,BLS,56,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 14469.6 → 14468.0
+2026-08-22,bls_ces_SMS17000000000000001,State payroll — SMS17000000000000001,BLS,56,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 6164.4 → 6176.4
+2026-08-22,bls_ces_SMS12000000000000001,State payroll — SMS12000000000000001,BLS,56,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 10033.3 → 10037.3
