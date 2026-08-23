@@ -1,151 +1,90 @@
 {
-  "date": "2026-08-22",
+  "date": "2026-08-23",
   "total": 35,
   "new": 0,
-  "unchanged": 24,
-  "revised": 10,
+  "unchanged": 34,
+  "revised": 0,
   "failed": 1,
-  "revisions": [
-    {
-      "series": "bls_laus_LASST060000000000003",
-      "name": "State unemployment \u2014 LASST060000000000003",
-      "agency": "BLS",
-      "diffs": 51
-    },
-    {
-      "series": "bls_laus_LASST360000000000003",
-      "name": "State unemployment \u2014 LASST360000000000003",
-      "agency": "BLS",
-      "diffs": 52
-    },
-    {
-      "series": "bls_laus_LASST480000000000003",
-      "name": "State unemployment \u2014 LASST480000000000003",
-      "agency": "BLS",
-      "diffs": 50
-    },
-    {
-      "series": "bls_laus_LASST170000000000003",
-      "name": "State unemployment \u2014 LASST170000000000003",
-      "agency": "BLS",
-      "diffs": 55
-    },
-    {
-      "series": "bls_laus_LASST120000000000003",
-      "name": "State unemployment \u2014 LASST120000000000003",
-      "agency": "BLS",
-      "diffs": 58
-    },
-    {
-      "series": "bls_ces_SMS06000000000000001",
-      "name": "State payroll \u2014 SMS06000000000000001",
-      "agency": "BLS",
-      "diffs": 55
-    },
-    {
-      "series": "bls_ces_SMS36000000000000001",
-      "name": "State payroll \u2014 SMS36000000000000001",
-      "agency": "BLS",
-      "diffs": 56
-    },
-    {
-      "series": "bls_ces_SMS48000000000000001",
-      "name": "State payroll \u2014 SMS48000000000000001",
-      "agency": "BLS",
-      "diffs": 56
-    },
-    {
-      "series": "bls_ces_SMS17000000000000001",
-      "name": "State payroll \u2014 SMS17000000000000001",
-      "agency": "BLS",
-      "diffs": 56
-    },
-    {
-      "series": "bls_ces_SMS12000000000000001",
-      "name": "State payroll \u2014 SMS12000000000000001",
-      "agency": "BLS",
-      "diffs": 56
-    }
-  ],
+  "revisions": [],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
       "series_name": "State unemployment \u2014 LASST060000000000003",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 51,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST360000000000003",
       "series_name": "State unemployment \u2014 LASST360000000000003",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 52,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST480000000000003",
       "series_name": "State unemployment \u2014 LASST480000000000003",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 50,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST170000000000003",
       "series_name": "State unemployment \u2014 LASST170000000000003",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 55,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST120000000000003",
       "series_name": "State unemployment \u2014 LASST120000000000003",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 58,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_ces_SMS06000000000000001",
       "series_name": "State payroll \u2014 SMS06000000000000001",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 55,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_ces_SMS36000000000000001",
       "series_name": "State payroll \u2014 SMS36000000000000001",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 56,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_ces_SMS48000000000000001",
       "series_name": "State payroll \u2014 SMS48000000000000001",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 56,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_ces_SMS17000000000000001",
       "series_name": "State payroll \u2014 SMS17000000000000001",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 56,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_ces_SMS12000000000000001",
       "series_name": "State payroll \u2014 SMS12000000000000001",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 56,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
