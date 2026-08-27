@@ -98,3 +98,4 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-08-22,bls_ces_SMS48000000000000001,State payroll — SMS48000000000000001,BLS,56,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 14469.6 → 14468.0
 2026-08-22,bls_ces_SMS17000000000000001,State payroll — SMS17000000000000001,BLS,56,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 6164.4 → 6176.4
 2026-08-22,bls_ces_SMS12000000000000001,State payroll — SMS12000000000000001,BLS,56,[0].period: M06 → M07; [0].periodName: June → July; [0].value: 10033.3 → 10037.3
+2026-08-27,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,18014,[0].data_as_of: 2026-08-20T00:00:00.000 → 2026-08-27T00:00:00.000; [1].data_as_of: 2026-08-20T00:00:00.000 → 2026-08-27T00:00:00.000; [2].data_as_of: 2026-08-20T00:00:00.000 → 2026-08-27T00:00:00.000
