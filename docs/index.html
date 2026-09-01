@@ -66,9 +66,9 @@
   </header>
 
   <div class="stats">
-    <div class="stat"><div class="stat-val">115</div><div class="stat-label">Days running</div></div>
-    <div class="stat"><div class="stat-val">127</div><div class="stat-label">Total polls</div></div>
-    <div class="stat"><div class="stat-val warn">100</div><div class="stat-label">Revisions caught</div></div>
+    <div class="stat"><div class="stat-val">116</div><div class="stat-label">Days running</div></div>
+    <div class="stat"><div class="stat-val">128</div><div class="stat-label">Total polls</div></div>
+    <div class="stat"><div class="stat-val warn">101</div><div class="stat-label">Revisions caught</div></div>
     <div class="stat"><div class="stat-val">35</div><div class="stat-label">Series tracked</div></div>
   </div>
 
@@ -119,9 +119,9 @@
           <div class="agency-name">HUD</div>
           <div class="agency-stats">
             <span class="a-total">2 series</span>
-            <span class="a-rev" style="color:#64748b">0 revised</span>
+            <span class="a-rev" style="color:#f59e0b">1 revised</span>
           </div>
-          <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
+          <div class="agency-bar"><div class="agency-bar-fill" style="width:100%"></div></div>
         </div>
   </div>
 
@@ -131,6 +131,13 @@
       <table>
         <thead><tr><th>Date</th><th>Agency</th><th>Series</th><th>Changes</th><th>Sample diff</th></tr></thead>
         <tbody>
+        <tr>
+          <td class="td-mono">2026-09-01</td>
+          <td><span class="agency-badge">HUD</span></td>
+          <td>Fair Market Rents — California detail</td>
+          <td class="td-mono td-rev">88</td>
+          <td class="td-sample">data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca</td>
+        </tr>
         <tr>
           <td class="td-mono">2026-08-27</td>
           <td><span class="agency-badge">CDC</span></td>
@@ -263,13 +270,6 @@
           <td>Metro CPI — CUURS49ASA0</td>
           <td class="td-mono td-rev">60</td>
           <td class="td-sample">[0].period: M06 → M07; [0].periodName: June → July; [0].value: 354.325 → 355.311</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-08-09</td>
-          <td><span class="agency-badge">HUD</span></td>
-          <td>Fair Market Rents — California detail</td>
-          <td class="td-mono td-rev">88</td>
-          <td class="td-sample">data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca</td>
         </tr></tbody>
       </table>
     </div>
@@ -284,7 +284,7 @@
       change policy conclusions, and alter historical narratives — but are not systematically recorded anywhere.
     </div>
     <div class="footer-mono">
-      Last poll: 2026-08-31<br>
+      Last poll: 2026-09-01<br>
       Started: 2026-05-08<br>
       <a href="https://doi.org/10.5281/zenodo.20091343" target="_blank" style="color: inherit;">DOI: 10.5281/zenodo.20091343</a><br>
       github.com/Abhisek077/govt-stats-tracker
