@@ -108,3 +108,6 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-09-04,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,17990,[0].data_as_of: 2026-08-27T00:00:00.000 → 2026-09-03T00:00:00.000; [1].data_as_of: 2026-08-27T00:00:00.000 → 2026-09-03T00:00:00.000; [2].data_as_of: 2026-08-27T00:00:00.000 → 2026-09-03T00:00:00.000
 2026-09-04,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,527,data.counties[0].Efficiency: 2142 → 2088; data.counties[0].Four-Bedroom: 4413 → 4250; data.counties[0].One-Bedroom: 2385 → 2290
 2026-09-11,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,17973,[0].data_as_of: 2026-09-03T00:00:00.000 → 2026-09-10T00:00:00.000; [1].data_as_of: 2026-09-03T00:00:00.000 → 2026-09-10T00:00:00.000; [2].data_as_of: 2026-09-03T00:00:00.000 → 2026-09-10T00:00:00.000
+2026-09-12,bls_cpi_CUURS49ASA0,Metro CPI — CUURS49ASA0,BLS,63,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 355.311 → 356.993
+2026-09-12,bls_cpi_CUURS12ASA0,Metro CPI — CUURS12ASA0,BLS,63,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 362.189 → 362.328
+2026-09-12,bls_cpi_CUURS23ASA0,Metro CPI — CUURS23ASA0,BLS,63,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 309.462 → 310.890
