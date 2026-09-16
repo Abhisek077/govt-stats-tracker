@@ -1,11 +1,18 @@
 {
-  "date": "2026-09-15",
+  "date": "2026-09-16",
   "total": 35,
   "new": 0,
-  "unchanged": 34,
-  "revised": 0,
+  "unchanged": 33,
+  "revised": 1,
   "failed": 1,
-  "revisions": [],
+  "revisions": [
+    {
+      "series": "cdc_brfss",
+      "name": "BRFSS behavioral risk estimates",
+      "agency": "CDC",
+      "diffs": 73833
+    }
+  ],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
@@ -251,8 +258,8 @@
       "series_id": "cdc_brfss",
       "series_name": "BRFSS behavioral risk estimates",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 73833,
       "is_new": false
     },
     {
