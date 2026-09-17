@@ -112,3 +112,4 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-09-12,bls_cpi_CUURS12ASA0,Metro CPI — CUURS12ASA0,BLS,63,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 362.189 → 362.328
 2026-09-12,bls_cpi_CUURS23ASA0,Metro CPI — CUURS23ASA0,BLS,63,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 309.462 → 310.890
 2026-09-16,cdc_brfss,BRFSS behavioral risk estimates,CDC,73833,[0].class: Women's Health → Tobacco Use; [0].classid: CLASS18 → CLASS17; [0].confidence_limit_high: None → 4.36
+2026-09-17,cdc_overdose_provisional,Provisional drug overdose deaths,CDC,31798,[0].data_value: 16 → 801; [0].indicator: Methadone (T40.3) → Number of Drug Overdose Deaths; [0].percent_complete: 100 → 99.5

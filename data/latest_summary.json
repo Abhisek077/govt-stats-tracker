@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-16",
+  "date": "2026-09-17",
   "total": 35,
   "new": 0,
   "unchanged": 33,
@@ -7,10 +7,10 @@
   "failed": 1,
   "revisions": [
     {
-      "series": "cdc_brfss",
-      "name": "BRFSS behavioral risk estimates",
+      "series": "cdc_overdose_provisional",
+      "name": "Provisional drug overdose deaths",
       "agency": "CDC",
-      "diffs": 73833
+      "diffs": 31798
     }
   ],
   "results": [
@@ -242,8 +242,8 @@
       "series_id": "cdc_overdose_provisional",
       "series_name": "Provisional drug overdose deaths",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 31798,
       "is_new": false
     },
     {
@@ -258,8 +258,8 @@
       "series_id": "cdc_brfss",
       "series_name": "BRFSS behavioral risk estimates",
       "agency": "CDC",
-      "status": "REVISED",
-      "diff_count": 73833,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
