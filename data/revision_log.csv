@@ -114,3 +114,13 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-09-16,cdc_brfss,BRFSS behavioral risk estimates,CDC,73833,[0].class: Women's Health → Tobacco Use; [0].classid: CLASS18 → CLASS17; [0].confidence_limit_high: None → 4.36
 2026-09-17,cdc_overdose_provisional,Provisional drug overdose deaths,CDC,31798,[0].data_value: 16 → 801; [0].indicator: Methadone (T40.3) → Number of Drug Overdose Deaths; [0].percent_complete: 100 → 99.5
 2026-09-18,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,17985,[0].data_as_of: 2026-09-10T00:00:00.000 → 2026-09-17T00:00:00.000; [1].data_as_of: 2026-09-10T00:00:00.000 → 2026-09-17T00:00:00.000; [2].data_as_of: 2026-09-10T00:00:00.000 → 2026-09-17T00:00:00.000
+2026-09-19,bls_laus_LASST060000000000003,State unemployment — LASST060000000000003,BLS,51,[0].period: M07 → M08; [0].periodName: July → August; [1].period: M06 → M07
+2026-09-19,bls_laus_LASST360000000000003,State unemployment — LASST360000000000003,BLS,53,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 4.4 → 4.3
+2026-09-19,bls_laus_LASST480000000000003,State unemployment — LASST480000000000003,BLS,51,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 4.5 → 4.4
+2026-09-19,bls_laus_LASST170000000000003,State unemployment — LASST170000000000003,BLS,56,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 4.9 → 4.7
+2026-09-19,bls_laus_LASST120000000000003,State unemployment — LASST120000000000003,BLS,59,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 4.6 → 4.5
+2026-09-19,bls_ces_SMS06000000000000001,State payroll — SMS06000000000000001,BLS,58,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 18133.0 → 18177.2
+2026-09-19,bls_ces_SMS36000000000000001,State payroll — SMS36000000000000001,BLS,59,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 9960.7 → 9946.0
+2026-09-19,bls_ces_SMS48000000000000001,State payroll — SMS48000000000000001,BLS,59,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 14468.0 → 14469.3
+2026-09-19,bls_ces_SMS17000000000000001,State payroll — SMS17000000000000001,BLS,59,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 6176.4 → 6175.6
+2026-09-19,bls_ces_SMS12000000000000001,State payroll — SMS12000000000000001,BLS,59,[0].period: M07 → M08; [0].periodName: July → August; [0].value: 10037.3 → 10051.6
