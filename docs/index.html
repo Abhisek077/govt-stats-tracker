@@ -66,9 +66,9 @@
   </header>
 
   <div class="stats">
-    <div class="stat"><div class="stat-val">139</div><div class="stat-label">Days running</div></div>
-    <div class="stat"><div class="stat-val">151</div><div class="stat-label">Total polls</div></div>
-    <div class="stat"><div class="stat-val warn">125</div><div class="stat-label">Revisions caught</div></div>
+    <div class="stat"><div class="stat-val">140</div><div class="stat-label">Days running</div></div>
+    <div class="stat"><div class="stat-val">152</div><div class="stat-label">Total polls</div></div>
+    <div class="stat"><div class="stat-val warn">126</div><div class="stat-label">Revisions caught</div></div>
     <div class="stat"><div class="stat-val">35</div><div class="stat-label">Series tracked</div></div>
   </div>
 
@@ -95,9 +95,9 @@
           <div class="agency-name">CDC</div>
           <div class="agency-stats">
             <span class="a-total">3 series</span>
-            <span class="a-rev" style="color:#64748b">0 revised</span>
+            <span class="a-rev" style="color:#f59e0b">1 revised</span>
           </div>
-          <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
+          <div class="agency-bar"><div class="agency-bar-fill" style="width:99%"></div></div>
         </div>
         <div class="agency-row">
           <div class="agency-name">Census</div>
@@ -131,6 +131,13 @@
       <table>
         <thead><tr><th>Date</th><th>Agency</th><th>Series</th><th>Changes</th><th>Sample diff</th></tr></thead>
         <tbody>
+        <tr>
+          <td class="td-mono">2026-09-25</td>
+          <td><span class="agency-badge">CDC</span></td>
+          <td>Weekly flu/pneumonia/COVID deaths by state</td>
+          <td class="td-mono td-rev">17946</td>
+          <td class="td-sample">[0].data_as_of: 2026-09-17T00:00:00.000 → 2026-09-24T00:00:00.000; [1].data_as_of: 2026-09-17T00:00:00.000 → 2026-09-24T</td>
+        </tr>
         <tr>
           <td class="td-mono">2026-09-19</td>
           <td><span class="agency-badge">BLS</span></td>
@@ -263,13 +270,6 @@
           <td>Weekly flu/pneumonia/COVID deaths by state</td>
           <td class="td-mono td-rev">17990</td>
           <td class="td-sample">[0].data_as_of: 2026-08-27T00:00:00.000 → 2026-09-03T00:00:00.000; [1].data_as_of: 2026-08-27T00:00:00.000 → 2026-09-03T</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-09-03</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST120000000000003</td>
-          <td class="td-mono td-rev">22</td>
-          <td class="td-sample">[7].footnotes[0].code: R → None; [7].footnotes[0].text: Data were subject to revision on April 8, 2026. → None; [8].foot</td>
         </tr></tbody>
       </table>
     </div>
@@ -284,7 +284,7 @@
       change policy conclusions, and alter historical narratives — but are not systematically recorded anywhere.
     </div>
     <div class="footer-mono">
-      Last poll: 2026-09-24<br>
+      Last poll: 2026-09-25<br>
       Started: 2026-05-08<br>
       <a href="https://doi.org/10.5281/zenodo.20091343" target="_blank" style="color: inherit;">DOI: 10.5281/zenodo.20091343</a><br>
       github.com/Abhisek077/govt-stats-tracker
