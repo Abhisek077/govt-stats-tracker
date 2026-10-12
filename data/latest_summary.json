@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "total": 35,
   "new": 0,
-  "unchanged": 24,
+  "unchanged": 34,
   "revised": 0,
-  "failed": 11,
+  "failed": 1,
   "revisions": [],
   "results": [
     {
@@ -123,7 +123,7 @@
       "series_id": "bea_sgdp_06",
       "series_name": "State GDP \u2014 California",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -131,7 +131,7 @@
       "series_id": "bea_pinc_06",
       "series_name": "Personal income \u2014 California",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -139,7 +139,7 @@
       "series_id": "bea_sgdp_36",
       "series_name": "State GDP \u2014 New York",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -147,7 +147,7 @@
       "series_id": "bea_pinc_36",
       "series_name": "Personal income \u2014 New York",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -155,7 +155,7 @@
       "series_id": "bea_sgdp_48",
       "series_name": "State GDP \u2014 Texas",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -163,7 +163,7 @@
       "series_id": "bea_pinc_48",
       "series_name": "Personal income \u2014 Texas",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -171,7 +171,7 @@
       "series_id": "bea_sgdp_17",
       "series_name": "State GDP \u2014 Illinois",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -179,7 +179,7 @@
       "series_id": "bea_pinc_17",
       "series_name": "Personal income \u2014 Illinois",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -187,7 +187,7 @@
       "series_id": "bea_sgdp_12",
       "series_name": "State GDP \u2014 Florida",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
@@ -195,7 +195,7 @@
       "series_id": "bea_pinc_12",
       "series_name": "Personal income \u2014 Florida",
       "agency": "BEA",
-      "status": "fetch_failed",
+      "status": "unchanged",
       "diff_count": 0,
       "is_new": false
     },
