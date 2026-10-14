@@ -1,11 +1,36 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "total": 35,
   "new": 0,
-  "unchanged": 34,
-  "revised": 0,
+  "unchanged": 30,
+  "revised": 4,
   "failed": 1,
-  "revisions": [],
+  "revisions": [
+    {
+      "series": "bls_cpi_CUURS49ASA0",
+      "name": "Metro CPI \u2014 CUURS49ASA0",
+      "agency": "BLS",
+      "diffs": 66
+    },
+    {
+      "series": "bls_cpi_CUURS12ASA0",
+      "name": "Metro CPI \u2014 CUURS12ASA0",
+      "agency": "BLS",
+      "diffs": 66
+    },
+    {
+      "series": "bls_cpi_CUURS35ASA0",
+      "name": "Metro CPI \u2014 CUURS35ASA0",
+      "agency": "BLS",
+      "diffs": 32
+    },
+    {
+      "series": "bls_cpi_CUURS23ASA0",
+      "name": "Metro CPI \u2014 CUURS23ASA0",
+      "agency": "BLS",
+      "diffs": 66
+    }
+  ],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
@@ -91,32 +116,32 @@
       "series_id": "bls_cpi_CUURS49ASA0",
       "series_name": "Metro CPI \u2014 CUURS49ASA0",
       "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 66,
       "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS12ASA0",
       "series_name": "Metro CPI \u2014 CUURS12ASA0",
       "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 66,
       "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS35ASA0",
       "series_name": "Metro CPI \u2014 CUURS35ASA0",
       "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 32,
       "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS23ASA0",
       "series_name": "Metro CPI \u2014 CUURS23ASA0",
       "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 66,
       "is_new": false
     },
     {
