@@ -1,147 +1,49 @@
 {
-  "date": "2026-10-14",
-  "total": 35,
+  "date": "2026-10-15",
+  "total": 25,
   "new": 0,
-  "unchanged": 30,
-  "revised": 4,
+  "unchanged": 23,
+  "revised": 1,
   "failed": 1,
   "revisions": [
     {
-      "series": "bls_cpi_CUURS49ASA0",
-      "name": "Metro CPI \u2014 CUURS49ASA0",
-      "agency": "BLS",
-      "diffs": 66
-    },
-    {
-      "series": "bls_cpi_CUURS12ASA0",
-      "name": "Metro CPI \u2014 CUURS12ASA0",
-      "agency": "BLS",
-      "diffs": 66
-    },
-    {
-      "series": "bls_cpi_CUURS35ASA0",
-      "name": "Metro CPI \u2014 CUURS35ASA0",
-      "agency": "BLS",
-      "diffs": 32
-    },
-    {
-      "series": "bls_cpi_CUURS23ASA0",
-      "name": "Metro CPI \u2014 CUURS23ASA0",
-      "agency": "BLS",
-      "diffs": 66
+      "series": "cdc_overdose_provisional",
+      "name": "Provisional drug overdose deaths",
+      "agency": "CDC",
+      "diffs": 36815
     }
   ],
   "results": [
     {
-      "series_id": "bls_laus_LASST060000000000003",
-      "series_name": "State unemployment \u2014 LASST060000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST360000000000003",
-      "series_name": "State unemployment \u2014 LASST360000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST480000000000003",
-      "series_name": "State unemployment \u2014 LASST480000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST170000000000003",
-      "series_name": "State unemployment \u2014 LASST170000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_laus_LASST120000000000003",
-      "series_name": "State unemployment \u2014 LASST120000000000003",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_ces_SMS06000000000000001",
-      "series_name": "State payroll \u2014 SMS06000000000000001",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_ces_SMS36000000000000001",
-      "series_name": "State payroll \u2014 SMS36000000000000001",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_ces_SMS48000000000000001",
-      "series_name": "State payroll \u2014 SMS48000000000000001",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_ces_SMS17000000000000001",
-      "series_name": "State payroll \u2014 SMS17000000000000001",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
-      "series_id": "bls_ces_SMS12000000000000001",
-      "series_name": "State payroll \u2014 SMS12000000000000001",
-      "agency": "BLS",
-      "status": "unchanged",
-      "diff_count": 0,
-      "is_new": false
-    },
-    {
       "series_id": "bls_cpi_CUURS49ASA0",
       "series_name": "Metro CPI \u2014 CUURS49ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 66,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS12ASA0",
       "series_name": "Metro CPI \u2014 CUURS12ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 66,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS35ASA0",
       "series_name": "Metro CPI \u2014 CUURS35ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 32,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_cpi_CUURS23ASA0",
       "series_name": "Metro CPI \u2014 CUURS23ASA0",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 66,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
@@ -260,8 +162,8 @@
       "series_id": "cdc_overdose_provisional",
       "series_name": "Provisional drug overdose deaths",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 36815,
       "is_new": false
     },
     {

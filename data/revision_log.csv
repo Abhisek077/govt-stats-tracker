@@ -131,3 +131,4 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-10-14,bls_cpi_CUURS12ASA0,Metro CPI — CUURS12ASA0,BLS,66,[0].period: M08 → M09; [0].periodName: August → September; [0].value: 362.328 → 363.870
 2026-10-14,bls_cpi_CUURS35ASA0,Metro CPI — CUURS35ASA0,BLS,32,[0].period: M07 → M09; [0].periodName: July → September; [0].value: 335.716 → 338.730
 2026-10-14,bls_cpi_CUURS23ASA0,Metro CPI — CUURS23ASA0,BLS,66,[0].period: M08 → M09; [0].periodName: August → September; [0].value: 310.890 → 313.415
+2026-10-15,cdc_overdose_provisional,Provisional drug overdose deaths,CDC,36815,[0].data_value: 801 → 6345; [0].indicator: Number of Drug Overdose Deaths → Number of Deaths; [0].month: March → May
