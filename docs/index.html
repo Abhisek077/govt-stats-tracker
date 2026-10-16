@@ -66,10 +66,10 @@
   </header>
 
   <div class="stats">
-    <div class="stat"><div class="stat-val">160</div><div class="stat-label">Days running</div></div>
-    <div class="stat"><div class="stat-val">172</div><div class="stat-label">Total polls</div></div>
-    <div class="stat"><div class="stat-val warn">133</div><div class="stat-label">Revisions caught</div></div>
-    <div class="stat"><div class="stat-val">25</div><div class="stat-label">Series tracked</div></div>
+    <div class="stat"><div class="stat-val">161</div><div class="stat-label">Days running</div></div>
+    <div class="stat"><div class="stat-val">173</div><div class="stat-label">Total polls</div></div>
+    <div class="stat"><div class="stat-val warn">135</div><div class="stat-label">Revisions caught</div></div>
+    <div class="stat"><div class="stat-val">35</div><div class="stat-label">Series tracked</div></div>
   </div>
 
   <div class="section">
@@ -86,7 +86,7 @@
         <div class="agency-row">
           <div class="agency-name">BLS</div>
           <div class="agency-stats">
-            <span class="a-total">4 series</span>
+            <span class="a-total">14 series</span>
             <span class="a-rev" style="color:#64748b">0 revised</span>
           </div>
           <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
@@ -119,9 +119,9 @@
           <div class="agency-name">HUD</div>
           <div class="agency-stats">
             <span class="a-total">2 series</span>
-            <span class="a-rev" style="color:#64748b">0 revised</span>
+            <span class="a-rev" style="color:#f59e0b">1 revised</span>
           </div>
-          <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
+          <div class="agency-bar"><div class="agency-bar-fill" style="width:100%"></div></div>
         </div>
   </div>
 
@@ -131,6 +131,20 @@
       <table>
         <thead><tr><th>Date</th><th>Agency</th><th>Series</th><th>Changes</th><th>Sample diff</th></tr></thead>
         <tbody>
+        <tr>
+          <td class="td-mono">2026-10-16</td>
+          <td><span class="agency-badge">HUD</span></td>
+          <td>Fair Market Rents — California detail</td>
+          <td class="td-mono td-rev">88</td>
+          <td class="td-sample">data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-10-16</td>
+          <td><span class="agency-badge">CDC</span></td>
+          <td>Weekly flu/pneumonia/COVID deaths by state</td>
+          <td class="td-mono td-rev">17892</td>
+          <td class="td-sample">[0].data_as_of: 2026-10-08T00:00:00.000 → 2026-10-15T00:00:00.000; [1].data_as_of: 2026-10-08T00:00:00.000 → 2026-10-15T</td>
+        </tr>
         <tr>
           <td class="td-mono">2026-10-15</td>
           <td><span class="agency-badge">CDC</span></td>
@@ -256,20 +270,6 @@
           <td>State unemployment — LASST060000000000003</td>
           <td class="td-mono td-rev">51</td>
           <td class="td-sample">[0].period: M07 → M08; [0].periodName: July → August; [1].period: M06 → M07</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-09-18</td>
-          <td><span class="agency-badge">CDC</span></td>
-          <td>Weekly flu/pneumonia/COVID deaths by state</td>
-          <td class="td-mono td-rev">17985</td>
-          <td class="td-sample">[0].data_as_of: 2026-09-10T00:00:00.000 → 2026-09-17T00:00:00.000; [1].data_as_of: 2026-09-10T00:00:00.000 → 2026-09-17T</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-09-17</td>
-          <td><span class="agency-badge">CDC</span></td>
-          <td>Provisional drug overdose deaths</td>
-          <td class="td-mono td-rev">31798</td>
-          <td class="td-sample">[0].data_value: 16 → 801; [0].indicator: Methadone (T40.3) → Number of Drug Overdose Deaths; [0].percent_complete: 100 →</td>
         </tr></tbody>
       </table>
     </div>
@@ -284,7 +284,7 @@
       change policy conclusions, and alter historical narratives — but are not systematically recorded anywhere.
     </div>
     <div class="footer-mono">
-      Last poll: 2026-10-15<br>
+      Last poll: 2026-10-16<br>
       Started: 2026-05-08<br>
       <a href="https://doi.org/10.5281/zenodo.20091343" target="_blank" style="color: inherit;">DOI: 10.5281/zenodo.20091343</a><br>
       github.com/Abhisek077/govt-stats-tracker
