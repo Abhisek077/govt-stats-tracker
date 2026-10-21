@@ -135,3 +135,13 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-10-16,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,17892,[0].data_as_of: 2026-10-08T00:00:00.000 → 2026-10-15T00:00:00.000; [1].data_as_of: 2026-10-08T00:00:00.000 → 2026-10-15T00:00:00.000; [2].data_as_of: 2026-10-08T00:00:00.000 → 2026-10-15T00:00:00.000
 2026-10-16,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: CA → ca; data.counties[1].statecode: CA → ca; data.counties[2].statecode: CA → ca
 2026-10-20,hud_fmr_ca_detail,Fair Market Rents — California detail,HUD,88,data.counties[0].statecode: ca → CA; data.counties[1].statecode: ca → CA; data.counties[2].statecode: ca → CA
+2026-10-21,bls_laus_LASST060000000000003,State unemployment — LASST060000000000003,BLS,53,[0].period: M08 → M09; [0].periodName: August → September; [1].period: M07 → M08
+2026-10-21,bls_laus_LASST360000000000003,State unemployment — LASST360000000000003,BLS,55,[0].period: M08 → M09; [0].periodName: August → September; [1].period: M07 → M08
+2026-10-21,bls_laus_LASST480000000000003,State unemployment — LASST480000000000003,BLS,53,[0].period: M08 → M09; [0].periodName: August → September; [1].period: M07 → M08
+2026-10-21,bls_laus_LASST170000000000003,State unemployment — LASST170000000000003,BLS,59,[0].period: M08 → M09; [0].periodName: August → September; [0].value: 4.7 → 4.6
+2026-10-21,bls_laus_LASST120000000000003,State unemployment — LASST120000000000003,BLS,62,[0].period: M08 → M09; [0].periodName: August → September; [0].value: 4.5 → 4.4
+2026-10-21,bls_ces_SMS06000000000000001,State payroll — SMS06000000000000001,BLS,61,[0].period: M08 → M09; [0].periodName: August → September; [0].value: 18177.2 → 18151.6
+2026-10-21,bls_ces_SMS36000000000000001,State payroll — SMS36000000000000001,BLS,62,[0].period: M08 → M09; [0].periodName: August → September; [0].value: 9946.0 → 9970.4
+2026-10-21,bls_ces_SMS48000000000000001,State payroll — SMS48000000000000001,BLS,62,[0].period: M08 → M09; [0].periodName: August → September; [0].value: 14469.3 → 14461.3
+2026-10-21,bls_ces_SMS17000000000000001,State payroll — SMS17000000000000001,BLS,62,[0].period: M08 → M09; [0].periodName: August → September; [0].value: 6175.6 → 6164.5
+2026-10-21,bls_ces_SMS12000000000000001,State payroll — SMS12000000000000001,BLS,62,[0].period: M08 → M09; [0].periodName: August → September; [0].value: 10051.6 → 10045.4
