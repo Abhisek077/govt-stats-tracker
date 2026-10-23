@@ -1,11 +1,24 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "total": 35,
   "new": 0,
-  "unchanged": 34,
-  "revised": 0,
+  "unchanged": 32,
+  "revised": 2,
   "failed": 1,
-  "revisions": [],
+  "revisions": [
+    {
+      "series": "census_saipe_schdist_2023",
+      "name": "SAIPE school district poverty estimates 2023",
+      "agency": "Census",
+      "diffs": 3274
+    },
+    {
+      "series": "cdc_weekly_flu_pneumonia",
+      "name": "Weekly flu/pneumonia/COVID deaths by state",
+      "agency": "CDC",
+      "diffs": 17898
+    }
+  ],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
@@ -227,8 +240,8 @@
       "series_id": "census_saipe_schdist_2023",
       "series_name": "SAIPE school district poverty estimates 2023",
       "agency": "Census",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 3274,
       "is_new": false
     },
     {
@@ -243,8 +256,8 @@
       "series_id": "cdc_weekly_flu_pneumonia",
       "series_name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 17898,
       "is_new": false
     },
     {
