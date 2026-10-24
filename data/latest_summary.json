@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "total": 35,
   "new": 0,
-  "unchanged": 32,
-  "revised": 2,
+  "unchanged": 33,
+  "revised": 1,
   "failed": 1,
   "revisions": [
     {
@@ -11,12 +11,6 @@
       "name": "SAIPE school district poverty estimates 2023",
       "agency": "Census",
       "diffs": 3274
-    },
-    {
-      "series": "cdc_weekly_flu_pneumonia",
-      "name": "Weekly flu/pneumonia/COVID deaths by state",
-      "agency": "CDC",
-      "diffs": 17898
     }
   ],
   "results": [
@@ -256,8 +250,8 @@
       "series_id": "cdc_weekly_flu_pneumonia",
       "series_name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "status": "REVISED",
-      "diff_count": 17898,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
