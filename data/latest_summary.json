@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "total": 35,
   "new": 0,
-  "unchanged": 29,
-  "revised": 5,
+  "unchanged": 28,
+  "revised": 6,
   "failed": 1,
   "revisions": [
     {
@@ -35,6 +35,12 @@
       "name": "State unemployment \u2014 LASST120000000000003",
       "agency": "BLS",
       "diffs": 21
+    },
+    {
+      "series": "cdc_weekly_flu_pneumonia",
+      "name": "Weekly flu/pneumonia/COVID deaths by state",
+      "agency": "CDC",
+      "diffs": 17858
     }
   ],
   "results": [
@@ -274,8 +280,8 @@
       "series_id": "cdc_weekly_flu_pneumonia",
       "series_name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "status": "unchanged",
-      "diff_count": 0,
+      "status": "REVISED",
+      "diff_count": 17858,
       "is_new": false
     },
     {
