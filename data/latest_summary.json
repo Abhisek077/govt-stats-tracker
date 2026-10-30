@@ -1,87 +1,50 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "total": 35,
   "new": 0,
-  "unchanged": 28,
-  "revised": 6,
+  "unchanged": 34,
+  "revised": 0,
   "failed": 1,
-  "revisions": [
-    {
-      "series": "bls_laus_LASST060000000000003",
-      "name": "State unemployment \u2014 LASST060000000000003",
-      "agency": "BLS",
-      "diffs": 21
-    },
-    {
-      "series": "bls_laus_LASST360000000000003",
-      "name": "State unemployment \u2014 LASST360000000000003",
-      "agency": "BLS",
-      "diffs": 21
-    },
-    {
-      "series": "bls_laus_LASST480000000000003",
-      "name": "State unemployment \u2014 LASST480000000000003",
-      "agency": "BLS",
-      "diffs": 21
-    },
-    {
-      "series": "bls_laus_LASST170000000000003",
-      "name": "State unemployment \u2014 LASST170000000000003",
-      "agency": "BLS",
-      "diffs": 21
-    },
-    {
-      "series": "bls_laus_LASST120000000000003",
-      "name": "State unemployment \u2014 LASST120000000000003",
-      "agency": "BLS",
-      "diffs": 21
-    },
-    {
-      "series": "cdc_weekly_flu_pneumonia",
-      "name": "Weekly flu/pneumonia/COVID deaths by state",
-      "agency": "CDC",
-      "diffs": 17858
-    }
-  ],
+  "revisions": [],
   "results": [
     {
       "series_id": "bls_laus_LASST060000000000003",
       "series_name": "State unemployment \u2014 LASST060000000000003",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 21,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST360000000000003",
       "series_name": "State unemployment \u2014 LASST360000000000003",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 21,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST480000000000003",
       "series_name": "State unemployment \u2014 LASST480000000000003",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 21,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST170000000000003",
       "series_name": "State unemployment \u2014 LASST170000000000003",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 21,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
       "series_id": "bls_laus_LASST120000000000003",
       "series_name": "State unemployment \u2014 LASST120000000000003",
       "agency": "BLS",
-      "status": "REVISED",
-      "diff_count": 21,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
@@ -280,8 +243,8 @@
       "series_id": "cdc_weekly_flu_pneumonia",
       "series_name": "Weekly flu/pneumonia/COVID deaths by state",
       "agency": "CDC",
-      "status": "REVISED",
-      "diff_count": 17858,
+      "status": "unchanged",
+      "diff_count": 0,
       "is_new": false
     },
     {
