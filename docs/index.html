@@ -66,9 +66,9 @@
   </header>
 
   <div class="stats">
-    <div class="stat"><div class="stat-val">195</div><div class="stat-label">Days running</div></div>
-    <div class="stat"><div class="stat-val">207</div><div class="stat-label">Total polls</div></div>
-    <div class="stat"><div class="stat-val warn">168</div><div class="stat-label">Revisions caught</div></div>
+    <div class="stat"><div class="stat-val">196</div><div class="stat-label">Days running</div></div>
+    <div class="stat"><div class="stat-val">208</div><div class="stat-label">Total polls</div></div>
+    <div class="stat"><div class="stat-val warn">179</div><div class="stat-label">Revisions caught</div></div>
     <div class="stat"><div class="stat-val">35</div><div class="stat-label">Series tracked</div></div>
   </div>
 
@@ -87,17 +87,17 @@
           <div class="agency-name">BLS</div>
           <div class="agency-stats">
             <span class="a-total">14 series</span>
-            <span class="a-rev" style="color:#64748b">0 revised</span>
+            <span class="a-rev" style="color:#f59e0b">10 revised</span>
           </div>
-          <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
+          <div class="agency-bar"><div class="agency-bar-fill" style="width:100%"></div></div>
         </div>
         <div class="agency-row">
           <div class="agency-name">CDC</div>
           <div class="agency-stats">
             <span class="a-total">3 series</span>
-            <span class="a-rev" style="color:#64748b">0 revised</span>
+            <span class="a-rev" style="color:#f59e0b">1 revised</span>
           </div>
-          <div class="agency-bar"><div class="agency-bar-fill" style="width:0%"></div></div>
+          <div class="agency-bar"><div class="agency-bar-fill" style="width:99%"></div></div>
         </div>
         <div class="agency-row">
           <div class="agency-name">Census</div>
@@ -131,6 +131,83 @@
       <table>
         <thead><tr><th>Date</th><th>Agency</th><th>Series</th><th>Changes</th><th>Sample diff</th></tr></thead>
         <tbody>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">CDC</span></td>
+          <td>Weekly flu/pneumonia/COVID deaths by state</td>
+          <td class="td-mono td-rev">17799</td>
+          <td class="td-sample">[0].data_as_of: 2026-11-12T00:00:00.000 → 2026-11-19T00:00:00.000; [1].data_as_of: 2026-11-12T00:00:00.000 → 2026-11-19T</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>State payroll — SMS12000000000000001</td>
+          <td class="td-mono td-rev">65</td>
+          <td class="td-sample">[0].period: M09 → M10; [0].periodName: September → October; [0].value: 10045.4 → 10043.2</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>State payroll — SMS17000000000000001</td>
+          <td class="td-mono td-rev">65</td>
+          <td class="td-sample">[0].period: M09 → M10; [0].periodName: September → October; [0].value: 6164.5 → 6179.0</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>State payroll — SMS48000000000000001</td>
+          <td class="td-mono td-rev">65</td>
+          <td class="td-sample">[0].period: M09 → M10; [0].periodName: September → October; [0].value: 14461.3 → 14500.5</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>State payroll — SMS36000000000000001</td>
+          <td class="td-mono td-rev">65</td>
+          <td class="td-sample">[0].period: M09 → M10; [0].periodName: September → October; [0].value: 9970.4 → 9948.9</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>State payroll — SMS06000000000000001</td>
+          <td class="td-mono td-rev">64</td>
+          <td class="td-sample">[0].period: M09 → M10; [0].periodName: September → October; [0].value: 18151.6 → 18211.2</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>State unemployment — LASST120000000000003</td>
+          <td class="td-mono td-rev">65</td>
+          <td class="td-sample">[0].period: M09 → M10; [0].periodName: September → October; [0].value: 4.4 → 4.3</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>State unemployment — LASST170000000000003</td>
+          <td class="td-mono td-rev">62</td>
+          <td class="td-sample">[0].period: M09 → M10; [0].periodName: September → October; [0].value: 4.6 → 4.5</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>State unemployment — LASST480000000000003</td>
+          <td class="td-mono td-rev">55</td>
+          <td class="td-sample">[0].period: M09 → M10; [0].periodName: September → October; [1].period: M08 → M09</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>State unemployment — LASST360000000000003</td>
+          <td class="td-mono td-rev">58</td>
+          <td class="td-sample">[0].period: M09 → M10; [0].periodName: September → October; [0].value: 4.3 → 4.2</td>
+        </tr>
+        <tr>
+          <td class="td-mono">2026-11-20</td>
+          <td><span class="agency-badge">BLS</span></td>
+          <td>State unemployment — LASST060000000000003</td>
+          <td class="td-mono td-rev">56</td>
+          <td class="td-sample">[0].period: M09 → M10; [0].periodName: September → October; [0].value: 5.1 → 5.0</td>
+        </tr>
         <tr>
           <td class="td-mono">2026-11-13</td>
           <td><span class="agency-badge">CDC</span></td>
@@ -193,83 +270,6 @@
           <td>Weekly flu/pneumonia/COVID deaths by state</td>
           <td class="td-mono td-rev">17858</td>
           <td class="td-sample">[0].data_as_of: 2026-10-22T00:00:00.000 → 2026-10-29T00:00:00.000; [1].data_as_of: 2026-10-22T00:00:00.000 → 2026-10-29T</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-29</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST120000000000003</td>
-          <td class="td-mono td-rev">21</td>
-          <td class="td-sample">[0]: None → {'year': '2026', 'period': 'M09', 'periodName': 'September', 'latest': 'true', 'value': '4.4', 'footnotes': </td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-29</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST170000000000003</td>
-          <td class="td-mono td-rev">21</td>
-          <td class="td-sample">[0]: None → {'year': '2026', 'period': 'M09', 'periodName': 'September', 'latest': 'true', 'value': '4.6', 'footnotes': </td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-29</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST480000000000003</td>
-          <td class="td-mono td-rev">21</td>
-          <td class="td-sample">[0]: None → {'year': '2026', 'period': 'M09', 'periodName': 'September', 'latest': 'true', 'value': '4.4', 'footnotes': </td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-29</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST360000000000003</td>
-          <td class="td-mono td-rev">21</td>
-          <td class="td-sample">[0]: None → {'year': '2026', 'period': 'M09', 'periodName': 'September', 'latest': 'true', 'value': '4.3', 'footnotes': </td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-29</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST060000000000003</td>
-          <td class="td-mono td-rev">21</td>
-          <td class="td-sample">[0]: None → {'year': '2026', 'period': 'M09', 'periodName': 'September', 'latest': 'true', 'value': '5.1', 'footnotes': </td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-28</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST120000000000003</td>
-          <td class="td-mono td-rev">21</td>
-          <td class="td-sample">[0]: {'footnotes': [{'code': 'P', 'text': 'Preliminary.'}], 'latest': 'true', 'period': 'M09', 'periodName': 'September'</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-28</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST170000000000003</td>
-          <td class="td-mono td-rev">21</td>
-          <td class="td-sample">[0]: {'footnotes': [{'code': 'P', 'text': 'Preliminary.'}], 'latest': 'true', 'period': 'M09', 'periodName': 'September'</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-28</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST480000000000003</td>
-          <td class="td-mono td-rev">21</td>
-          <td class="td-sample">[0]: {'footnotes': [{'code': 'P', 'text': 'Preliminary.'}], 'latest': 'true', 'period': 'M09', 'periodName': 'September'</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-28</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST360000000000003</td>
-          <td class="td-mono td-rev">21</td>
-          <td class="td-sample">[0]: {'footnotes': [{'code': 'P', 'text': 'Preliminary.'}], 'latest': 'true', 'period': 'M09', 'periodName': 'September'</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-28</td>
-          <td><span class="agency-badge">BLS</span></td>
-          <td>State unemployment — LASST060000000000003</td>
-          <td class="td-mono td-rev">21</td>
-          <td class="td-sample">[0]: {'footnotes': [{'code': 'P', 'text': 'Preliminary.'}], 'latest': 'true', 'period': 'M09', 'periodName': 'September'</td>
-        </tr>
-        <tr>
-          <td class="td-mono">2026-10-24</td>
-          <td><span class="agency-badge">Census</span></td>
-          <td>SAIPE school district poverty estimates 2023</td>
-          <td class="td-mono td-rev">3274</td>
-          <td class="td-sample">[1012][0]: River Ridge Community Unit School District 210 → Crosbyton Consolidated Independent School District; [1012][1</td>
         </tr></tbody>
       </table>
     </div>
@@ -284,7 +284,7 @@
       change policy conclusions, and alter historical narratives — but are not systematically recorded anywhere.
     </div>
     <div class="footer-mono">
-      Last poll: 2026-11-19<br>
+      Last poll: 2026-11-20<br>
       Started: 2026-05-08<br>
       <a href="https://doi.org/10.5281/zenodo.20091343" target="_blank" style="color: inherit;">DOI: 10.5281/zenodo.20091343</a><br>
       github.com/Abhisek077/govt-stats-tracker

@@ -167,3 +167,14 @@ date,series_id,series_name,agency,diff_count,sample_diff
 2026-11-10,bls_cpi_CUURS23ASA0,Metro CPI — CUURS23ASA0,BLS,69,[0].period: M09 → M10; [0].periodName: September → October; [0].value: 313.415 → 314.384
 2026-11-10,cdc_overdose_provisional,Provisional drug overdose deaths,CDC,35623,[0].data_value: 6345 → 51285; [0].percent_pending_investigation: 0.031520883 → 0.025348542; [0].state: VT → KY
 2026-11-13,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,17851,[0].data_as_of: 2026-11-05T00:00:00.000 → 2026-11-12T00:00:00.000; [1].data_as_of: 2026-11-05T00:00:00.000 → 2026-11-12T00:00:00.000; [2].data_as_of: 2026-11-05T00:00:00.000 → 2026-11-12T00:00:00.000
+2026-11-20,bls_laus_LASST060000000000003,State unemployment — LASST060000000000003,BLS,56,[0].period: M09 → M10; [0].periodName: September → October; [0].value: 5.1 → 5.0
+2026-11-20,bls_laus_LASST360000000000003,State unemployment — LASST360000000000003,BLS,58,[0].period: M09 → M10; [0].periodName: September → October; [0].value: 4.3 → 4.2
+2026-11-20,bls_laus_LASST480000000000003,State unemployment — LASST480000000000003,BLS,55,[0].period: M09 → M10; [0].periodName: September → October; [1].period: M08 → M09
+2026-11-20,bls_laus_LASST170000000000003,State unemployment — LASST170000000000003,BLS,62,[0].period: M09 → M10; [0].periodName: September → October; [0].value: 4.6 → 4.5
+2026-11-20,bls_laus_LASST120000000000003,State unemployment — LASST120000000000003,BLS,65,[0].period: M09 → M10; [0].periodName: September → October; [0].value: 4.4 → 4.3
+2026-11-20,bls_ces_SMS06000000000000001,State payroll — SMS06000000000000001,BLS,64,[0].period: M09 → M10; [0].periodName: September → October; [0].value: 18151.6 → 18211.2
+2026-11-20,bls_ces_SMS36000000000000001,State payroll — SMS36000000000000001,BLS,65,[0].period: M09 → M10; [0].periodName: September → October; [0].value: 9970.4 → 9948.9
+2026-11-20,bls_ces_SMS48000000000000001,State payroll — SMS48000000000000001,BLS,65,[0].period: M09 → M10; [0].periodName: September → October; [0].value: 14461.3 → 14500.5
+2026-11-20,bls_ces_SMS17000000000000001,State payroll — SMS17000000000000001,BLS,65,[0].period: M09 → M10; [0].periodName: September → October; [0].value: 6164.5 → 6179.0
+2026-11-20,bls_ces_SMS12000000000000001,State payroll — SMS12000000000000001,BLS,65,[0].period: M09 → M10; [0].periodName: September → October; [0].value: 10045.4 → 10043.2
+2026-11-20,cdc_weekly_flu_pneumonia,Weekly flu/pneumonia/COVID deaths by state,CDC,17799,[0].data_as_of: 2026-11-12T00:00:00.000 → 2026-11-19T00:00:00.000; [1].data_as_of: 2026-11-12T00:00:00.000 → 2026-11-19T00:00:00.000; [2].data_as_of: 2026-11-12T00:00:00.000 → 2026-11-19T00:00:00.000
